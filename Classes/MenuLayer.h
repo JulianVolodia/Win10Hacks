@@ -6,11 +6,10 @@
 class MenuLayer : public cocos2d::Layer
 {
 public:
-
     virtual bool init();
 
     CREATE_FUNC(MenuLayer);
 };
 
-#endif // __MENU_H__
+#endif // __MENU_LAYER_H__
 

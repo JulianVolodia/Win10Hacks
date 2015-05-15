@@ -29,6 +29,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -67,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h">
+      <Filter>Layout</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

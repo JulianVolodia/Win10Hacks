@@ -20,7 +20,10 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
@@ -37,7 +40,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">

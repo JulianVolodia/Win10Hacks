@@ -9,8 +9,13 @@ public:
         INIT,
         MENU,
         GAME,
+        SETTINGS,
         __END
     };
+
+    static GameState activeState;
+
+    //static std::map<GameState, GameState>
 };
 
 #endif // __GAME_SCENE_DEFINES_H__
