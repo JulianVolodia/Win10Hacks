@@ -14,6 +14,7 @@ public:
     };
 
     static GameState activeState;
+    static GameState queuedState;
 
     //static std::map<GameState, GameState>
 };
