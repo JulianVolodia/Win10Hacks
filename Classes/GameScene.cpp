@@ -13,12 +13,17 @@ bool GameScene::init()
     }
 
     mapLayers[GState::MENU] = MenuLayer::create();
-    this->addChild(mapLayers[GState::MENU]);
+    mapLayers[GState::INIT] = InitLayer::create();
+    mapLayers[GState::GAME] = InitLayer::create();
+    mapLayers[GState::SETTINGS] = SettingsLayer::create();
 
-    /*for (unsigned int i = GameScene::INIT; i < GameScene::__END; ++i)
+    for (unsigned int i = GState::INIT; i < GState::__END; ++i)
     {
-        this->addChild(mapLayers[static_cast<GameState>(i)]);
-    }*/
+        this->addChild(mapLayers[static_cast<GState>(i)]);
+        mapLayers[static_cast<GState>(i)]->setVisible(false);
+    }
+
+    mapLayers[GameSceneDefines::activeState]->setVisible(true);
 
     return true;
 }

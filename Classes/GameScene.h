@@ -4,6 +4,9 @@
 #include "cocos2d.h"
 #include "GameSceneDefines.h"
 #include "MenuLayer.h"
+#include "InitLayer.h"
+//#include "GameLayer.h"
+#include "SettingsLayer.h"
 #include <map>
 
 class GameScene : public cocos2d::Scene
