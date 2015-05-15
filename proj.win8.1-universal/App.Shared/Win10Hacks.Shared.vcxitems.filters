@@ -14,6 +14,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp">
       <Filter>Layout</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -39,6 +42,12 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h">
       <Filter>Layout</Filter>
     </ClInclude>
   </ItemGroup>

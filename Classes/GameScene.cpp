@@ -12,6 +12,14 @@ bool GameScene::init()
         return false;
     }
 
+    mapLayers[GState::MENU] = MenuLayer::create();
+    this->addChild(mapLayers[GState::MENU]);
+
+    /*for (unsigned int i = GameScene::INIT; i < GameScene::__END; ++i)
+    {
+        this->addChild(mapLayers[static_cast<GameState>(i)]);
+    }*/
+
     return true;
 }
 
