@@ -12,7 +12,7 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
-	CCLog("log0");
+	CCLOG("log0");
 
 	this->setPosition(visibleSize / 2);
 
@@ -55,7 +55,7 @@ void Player::update(float dt)
 
 void Player::keyPressed(EventKeyboard::KeyCode keyCode, Event * event)
 {
-	CCLog("log1");
+	CCLOG("log1");
 	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
 	{
 		Director::getInstance()->end();
@@ -67,15 +67,15 @@ void Player::keyReleased(EventKeyboard::KeyCode keyCode, Event * event)
 
 }
 
-bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
+bool Player::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-
+	return true;
 }
-void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+void Player::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 {
 	Director::getInstance()->end();
 }
-void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
+void Player::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
 {
 
 }
