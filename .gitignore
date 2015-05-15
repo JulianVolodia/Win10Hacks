@@ -4,6 +4,9 @@
 # Cocos library
 cocos2d/*
 
+# Generated
+proj.win8.1-universal/App.WindowsPhone/Generated Files/*
+
 # User-specific files
 *.suo
 *.user

@@ -1,14 +1,14 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Win10Hacks", "Win10Hacks", "{36AFDE04-D127-4D84-9730-D84E3E51EAA7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App.Shared", "App.Shared\Win10Hacks.Shared.vcxitems", "{A3AD93E4-0B2F-4C58-9181-69BED2E42E3E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win10Hacks.Shared", "App.Shared\Win10Hacks.Shared.vcxitems", "{A3AD93E4-0B2F-4C58-9181-69BED2E42E3E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App.Windows", "App.Windows\Win10Hacks.Windows.vcxproj", "{79A8FCDA-4B12-4DD1-B676-FF148D651638}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win10Hacks.Windows", "App.Windows\Win10Hacks.Windows.vcxproj", "{79A8FCDA-4B12-4DD1-B676-FF148D651638}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "App.WindowsPhone", "App.WindowsPhone\Win10Hacks.WindowsPhone.vcxproj", "{396FE85E-BB05-4B92-BCCB-F89AED4EA41A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win10Hacks.WindowsPhone", "App.WindowsPhone\Win10Hacks.WindowsPhone.vcxproj", "{396FE85E-BB05-4B92-BCCB-F89AED4EA41A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libcocos2d", "libcocos2d", "{80DA05C1-6532-4D2A-8606-EF02079B1373}"
 EndProject

@@ -136,7 +136,7 @@
    <PreBuildEvent>
       <Command>
         xcopy "$(SolutionDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
-        xcopy "$(OutDir)..\External\*.dll" "$(OutDir)" /D /Y /F
+        xcopy "$(SolutionDir)..\External\*.dll" "$(OutDir)" /D /Y /F
       </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -160,7 +160,7 @@
    <PreBuildEvent>
       <Command>
         xcopy "$(SolutionDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
-        xcopy "$(OutDir)..\External\*.dll" "$(OutDir)" /D /Y /F
+        xcopy "$(SolutionDir)..\External\*.dll" "$(OutDir)" /D /Y /F
       </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -184,7 +184,7 @@
      <PreBuildEvent>
       <Command>
         xcopy "$(SolutionDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
-        xcopy "$(OutDir)..\External\*.dll" "$(OutDir)" /D /Y /F
+        xcopy "$(SolutionDir)..\External\*.dll" "$(OutDir)" /D /Y /F
       </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
