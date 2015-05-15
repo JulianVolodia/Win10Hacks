@@ -7,6 +7,10 @@ cocos2d/*
 # Generated
 proj.win8.1-universal/App.WindowsPhone/Generated Files/*
 
+# All debugs and releases
+[Dd]ebug*/
+[Rr]elease*/
+
 # User-specific files
 *.suo
 *.user
