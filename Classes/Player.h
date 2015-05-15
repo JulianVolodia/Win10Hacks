@@ -12,7 +12,8 @@ public:
 	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event * event);
 private:
 	float horizontalSpeed{ 0 };
-
+	float verticalSpeed{ 0 };
+	float acceleration{ 5 };
 
 };
 

@@ -17,40 +17,44 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp" />
+<<<<<<< HEAD
+=======
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
+>>>>>>> fdb5675b42f2a0f2b3614335a1bae2ba0416f530
     <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Cocos2dRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLES.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)OpenGLESPage.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Player.cpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h" />
+<<<<<<< HEAD
+=======
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
+>>>>>>> fdb5675b42f2a0f2b3614335a1bae2ba0416f530
     <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClInclude>
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLES.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)OpenGLESPage.xaml</DependentUpon>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectCapability Include="SourceItemsFromImports" />

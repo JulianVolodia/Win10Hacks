@@ -12,6 +12,7 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
+	CCLog("log0");
 
 	this->setPosition(visibleSize / 2);
 
@@ -26,12 +27,28 @@ bool Player::init()
 
 void Player::update(float dt)
 {
+	auto visibleSize = Director::getInstance()->getVisibleSize();
+
+	if (this->getBoundingBox().getMinX() + horizontalSpeed < 0)
+	{
+		setPositionX(0);
+	}
+	else if (this->getBoundingBox().getMaxX() + horizontalSpeed > visibleSize.width)
+	{
+		setPositionX(visibleSize.width - this->getBoundingBox().size.width);
+	}
+	else
+	{
+		this->setPositionX(getPositionX() + horizontalSpeed);
+	}
+
 
 
 }
 
 void Player::keyPressed(EventKeyboard::KeyCode keyCode, Event * event)
 {
+	CCLog("log1");
 	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
 	{
 		Director::getInstance()->end();
