@@ -12,7 +12,7 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
-	CCLog("log0");
+	CCLOG("log0");
 
 	this->setPosition(visibleSize / 2);
 
@@ -21,9 +21,16 @@ bool Player::init()
 	keyboardListener->onKeyReleased = CC_CALLBACK_2(Player::keyReleased, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
 
+	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener->onTouchBegan = CC_CALLBACK_2(Player::onTouchBegan, this);
+	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
+	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+
+
 	return true;
 }
-
+	
 
 void Player::update(float dt)
 {
@@ -48,7 +55,7 @@ void Player::update(float dt)
 
 void Player::keyPressed(EventKeyboard::KeyCode keyCode, Event * event)
 {
-	CCLog("log1");
+	CCLOG("log1");
 	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
 	{
 		Director::getInstance()->end();
@@ -56,6 +63,19 @@ void Player::keyPressed(EventKeyboard::KeyCode keyCode, Event * event)
 }
 
 void Player::keyReleased(EventKeyboard::KeyCode keyCode, Event * event)
+{
+
+}
+
+bool Player::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+	return true;
+}
+void Player::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+	Director::getInstance()->end();
+}
+void Player::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
 {
 
 }
