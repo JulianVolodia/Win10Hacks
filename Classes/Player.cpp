@@ -21,9 +21,16 @@ bool Player::init()
 	keyboardListener->onKeyReleased = CC_CALLBACK_2(Player::keyReleased, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
 
+	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener->onTouchBegan = CC_CALLBACK_2(Player::onTouchBegan, this);
+	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
+	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+
+
 	return true;
 }
-
+	
 
 void Player::update(float dt)
 {
@@ -56,6 +63,19 @@ void Player::keyPressed(EventKeyboard::KeyCode keyCode, Event * event)
 }
 
 void Player::keyReleased(EventKeyboard::KeyCode keyCode, Event * event)
+{
+
+}
+
+bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+
+}
+void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+	Director::getInstance()->end();
+}
+void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
 {
 
 }
