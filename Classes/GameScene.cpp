@@ -1,6 +1,5 @@
 #include "GameScene.h"
 #include "GameObject.h"
-#define DEBUG_PHYSICS 1
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
@@ -154,10 +153,9 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
             }
             else if (tagB == 2)
             {
-                CCLOG("PRZYŒPIESZ KURWA");
-                player->acceleration += 100;
-                other->removeFromParent();
-                SoundEngine::playEffect("audio/bonusSFX.wav", false, 0.5);
+							player->acceleration = player->accelerationBase[player->currentLevel + 1];
+							other->removeFromParent();
+               SoundEngine::playEffect("audio/bonusSFX.wav", false, 0.5);
             }
         }
         else if (tagB == 0)
@@ -173,10 +171,9 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
 			}
 			else if (tagA == 2)
 			{
-				CCLOG("PRZYŒPIESZ KURWA");
 				player->acceleration = player->accelerationBase[player->currentLevel+1];
 				other->removeFromParent();
-                SoundEngine::playEffect("audio/bonusSFX.wav", false, 0.5);
+        SoundEngine::playEffect("audio/bonusSFX.wav", false, 0.5);
 			}
 		}
 	}

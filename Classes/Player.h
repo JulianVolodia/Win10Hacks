@@ -23,7 +23,7 @@ public:
 	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event * event);
 
 	bool onContactBegin(cocos2d::PhysicsContact& contact);
-	float verticalSpeed{ 150 };
+	float verticalSpeed{ 100 };
 	cocos2d::EventListenerTouchOneByOne * touchListener;
 	cocos2d::EventListenerKeyboard * keyboardListener;
 	void startGame();
