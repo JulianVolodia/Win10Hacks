@@ -1,5 +1,6 @@
 //#include "pch.h"
 #include "GameObject.h"
+#include "Coin.h"
 
 using namespace cocos2d;
 
@@ -24,7 +25,7 @@ bool GameObject::init()
 		physicalBody->setTag(1);
 		setScale(2);
 		physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*1.9));
-		
+
 	}
 	else if (r == 1)
 	{
@@ -37,9 +38,12 @@ bool GameObject::init()
 	else
 	{
 		type = GameObjectType::COIN;
-		setTexture("gfx/potionek.png");
+		//setTexture("gfx/potionek.png");
 		physicalBody->setTag(2);
 		physicalBody->addShape(PhysicsShapeBox::create(getContentSize() * 1));
+        auto coin = Coin::create();
+        coin->setScale(0.5);
+        addChild(coin);
 	}
 
 	getTexture()->setAliasTexParameters();

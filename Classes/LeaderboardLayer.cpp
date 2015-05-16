@@ -26,6 +26,8 @@ bool LeaderboardLayer::init()
     this->addChild(title);
 
     cocos2d::MenuItemLabel * miBack = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("<<< Back", "fonts/arial.ttf", fontSize));
+    miBack->setColor(cocos2d::Color3B::BLACK);
+
     miBack->setCallback([&] (Ref* sender)
     {
         GameSceneDefines::queuedState = GameSceneDefines::MENU;

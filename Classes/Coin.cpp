@@ -15,12 +15,12 @@ bool Coin::init()
 	setAnchorPoint(Vec2(0.5, 0.5));
 
 
-	auto visibleSize = Director::getInstance()->getVisibleSize();
-	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
-	physicsBody->setDynamic(false);
-	physicsBody->setContactTestBitmask(0xFFFFFFFF);
-	physicsBody->setTag(0);
-	this->setPhysicsBody(physicsBody);
+	//auto visibleSize = Director::getInstance()->getVisibleSize();
+	//auto physicsBody = PhysicsBody::createBox(this->getContentSize());
+	//physicsBody->setDynamic(false);
+	//physicsBody->setContactTestBitmask(0xFFFFFFFF);
+	//physicsBody->setTag(0);
+	//this->setPhysicsBody(physicsBody);
 	return true;
 }
 
@@ -57,8 +57,7 @@ Coin* Coin::create()
 {
     std::string fileName = "coin";
     std::string animationToRun = "turn";
-    std::function<void()> callback = [] ()
-    {};
+    std::function<void()> callback = nullptr;
     Coin* animatedSprite{ new Coin() };
     animatedSprite->animationFile = fileName;
 

@@ -21,12 +21,14 @@ bool MenuLayer::init()
     cocos2d::MenuItemLabel * miNewGame = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("New Game", "fonts/arial.ttf",fontSize));
 
     vecMenuItems.pushBack(miNewGame);
+    miNewGame->setColor(cocos2d::Color3B::BLACK);
     miNewGame->setCallback([&] (Ref* sender)
     {
         GameSceneDefines::queuedState = GameSceneDefines::GAME;
     });
 
     cocos2d::MenuItemLabel * miSettings = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("Settings", "fonts/arial.ttf", fontSize));
+    miSettings->setColor(cocos2d::Color3B::BLACK);
     vecMenuItems.pushBack(miSettings);
     miSettings->setCallback([&] (Ref* sender)
     {
@@ -34,6 +36,7 @@ bool MenuLayer::init()
     });
 
     cocos2d::MenuItemLabel * miLeaderboards = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("Leaderboards", "fonts/arial.ttf", fontSize));
+    miLeaderboards->setColor(cocos2d::Color3B::BLACK);
     vecMenuItems.pushBack(miLeaderboards);
     miLeaderboards->setCallback([&] (Ref* sender)
     {
@@ -41,6 +44,7 @@ bool MenuLayer::init()
     });
 
     cocos2d::MenuItemLabel * miCredits = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("Credits", "fonts/arial.ttf", fontSize));
+    miCredits->setColor(cocos2d::Color3B::BLACK);
     vecMenuItems.pushBack(miCredits);
     miCredits->setCallback([&] (Ref* sender)
     {
@@ -48,6 +52,7 @@ bool MenuLayer::init()
     });
 
     cocos2d::MenuItemLabel * miAchievements = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("Achievements", "fonts/arial.ttf", fontSize));
+    miAchievements->setColor(cocos2d::Color3B::BLACK);
     vecMenuItems.pushBack(miAchievements);
     miAchievements->setCallback([&] (Ref* sender)
     {
@@ -55,6 +60,7 @@ bool MenuLayer::init()
     });
 
     cocos2d::MenuItemLabel * miName = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("Confirm", "fonts/arial.ttf", fontSize));
+    miName->setColor(cocos2d::Color3B::BLACK);
     vecMenuItems.pushBack(miName);
 
     miName->setCallback([&] (Ref* sender)
@@ -79,6 +85,7 @@ bool MenuLayer::init()
     textField->setContentSize(Size(240, 160));
     textField->setAlignment(TextHAlignment::CENTER, TextVAlignment::CENTER);
     textField->setPosition(visibleSize.width / 2.f, 50);
+    textField->setColor(cocos2d::Color3B::BLACK);
 
     //textField->getString();
     //textField->addEventListener(CC_CALLBACK_2(UITextFieldTest_LineWrap::textFieldEvent, this));
