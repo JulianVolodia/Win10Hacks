@@ -27,9 +27,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Obstacle.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClCompile>
@@ -50,9 +54,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Obstacle.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClInclude>

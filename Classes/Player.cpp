@@ -16,17 +16,11 @@ bool Player::init()
 
 	this->setPosition(visibleSize / 2);
 
-	auto keyboardListener = EventListenerKeyboard::create();
-	keyboardListener->onKeyPressed = CC_CALLBACK_2(Player::keyPressed, this);
-	keyboardListener->onKeyReleased = CC_CALLBACK_2(Player::keyReleased, this);
-	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
-
-	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener = EventListenerTouchOneByOne::create();
 	touchListener->onTouchBegan = CC_CALLBACK_2(Player::onTouchBegan, this);
 	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
 	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
-
 
 	return true;
 }
@@ -38,44 +32,66 @@ void Player::update(float dt)
 
 	if (this->getBoundingBox().getMinX() + horizontalSpeed < 0)
 	{
-		setPositionX(0);
+		setPositionX(this->getBoundingBox().size.width / 2);
 	}
 	else if (this->getBoundingBox().getMaxX() + horizontalSpeed > visibleSize.width)
 	{
-		setPositionX(visibleSize.width - this->getBoundingBox().size.width);
+		setPositionX(visibleSize.width - this->getBoundingBox().size.width / 2);
 	}
 	else
 	{
 		this->setPositionX(getPositionX() + horizontalSpeed);
 	}
 
-
-
+	verticalSpeed += acceleration * dt;
 }
 
-void Player::keyPressed(EventKeyboard::KeyCode keyCode, Event * event)
+bool Player::onTouchBegan(Touch* touch, Event* event)
 {
-	CCLOG("log1");
-	if (keyCode == EventKeyboard::KeyCode::KEY_ESCAPE)
+	auto visibleSize = Director::getInstance()->getVisibleSize();
+	Vec2 position = touch->getLocationInView();
+	position.y = visibleSize.height - position.y;
+
+	if (position.y > visibleSize.height / 5)
 	{
-		Director::getInstance()->end();
+		if (position.x > visibleSize.width / 2)
+		{
+			horizontalSpeed = 10.0f;
+		}
+		else
+		{
+			horizontalSpeed = -10.0f;
+		}
 	}
-}
+	else
+	{
+		boostUp();
+	}
 
-void Player::keyReleased(EventKeyboard::KeyCode keyCode, Event * event)
-{
-
-}
-
-bool Player::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
-{
 	return true;
 }
-void Player::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+void Player::onTouchEnded(Touch* touch, Event* event)
 {
-	Director::getInstance()->end();
+	horizontalSpeed = 0.0f;
 }
-void Player::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
+void Player::onTouchMoved(Touch* touch, Event* event)
 {
 
+}
+
+void Player::boostUp()
+{
+	CCLOG("BOOOOOOST!!!!");
+}
+
+void Player::startGame()
+{
+	touchListener->setEnabled(true);
+	scheduleUpdate();
+}
+
+void Player::endGame()
+{
+	touchListener->setEnabled(false);
+	unscheduleUpdate();
 }

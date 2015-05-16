@@ -8,16 +8,16 @@ public:
 	void update(float);
 	bool init();
 
-	void keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event * event);
-	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event * event);
-
 	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
+	float verticalSpeed{ 0 };
+	cocos2d::EventListenerTouchOneByOne * touchListener;
+	void startGame();
+	void endGame();
 private:
 	float horizontalSpeed{ 0 };
-	float verticalSpeed{ 0 };
 	float acceleration{ 5 };
-
+	void boostUp();
 };
 
