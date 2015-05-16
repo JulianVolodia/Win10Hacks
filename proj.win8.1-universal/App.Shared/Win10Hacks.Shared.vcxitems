@@ -27,6 +27,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MainLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MiscObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
@@ -53,6 +54,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MainLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MiscObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
