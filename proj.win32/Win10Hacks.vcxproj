@@ -160,6 +160,7 @@
     <ClCompile Include="..\Classes\PauseLayer.cpp" />
     <ClCompile Include="..\Classes\Player.cpp" />
     <ClCompile Include="..\Classes\SettingsLayer.cpp" />
+    <ClCompile Include="..\Classes\SoundEngine.cpp" />
     <ClCompile Include="..\Classes\Spawner.cpp" />
     <ClCompile Include="..\Classes\TestScene.cpp" />
     <ClCompile Include="main.cpp" />
@@ -182,6 +183,7 @@
     <ClInclude Include="..\Classes\PauseLayer.h" />
     <ClInclude Include="..\Classes\Player.h" />
     <ClInclude Include="..\Classes\SettingsLayer.h" />
+    <ClInclude Include="..\Classes\SoundEngine.h" />
     <ClInclude Include="..\Classes\Spawner.h" />
     <ClInclude Include="..\Classes\TestScene.h" />
     <ClInclude Include="main.h" />
