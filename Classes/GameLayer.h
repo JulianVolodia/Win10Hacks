@@ -13,8 +13,8 @@ public:
     virtual void update(float dt)
     {}
 
-    virtual void onActive()
-    {}
+    virtual void onActive();
+
 private:
     Player * player;
 };

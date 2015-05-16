@@ -6,27 +6,34 @@ bool InitLayer::init()
 {
     /*if (!cocos2d::Layer::init())
     {
-        return false;
+    return false;
     }*/
 
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
 
     cocos2d::Sprite * logo = cocos2d::Sprite::create("Misc/logo.png");
-
     logo->setScale(0.3f);
-    logo->setPosition(visibleSize / 2);
 
-    this->addChild(logo);
+    MenuItemSprite * miLogo = MenuItemSprite::create(logo, logo, [&] (Ref* sender)
+    {
+        GameSceneDefines::queuedState = GameSceneDefines::MENU;
+    });
 
-    auto touchListenerInit = EventListenerTouchOneByOne::create();
+    miLogo->setPosition(0,0);
+
+    cocos2d::Menu * menu = cocos2d::Menu::createWithItem(miLogo);
+    menu->setPosition(visibleSize / 2);
+
+    /*auto touchListenerInit = EventListenerTouchOneByOne::create();
     touchListenerInit->onTouchBegan = CC_CALLBACK_2(InitLayer::onTouchBegan, this);
     touchListenerInit->onTouchEnded = CC_CALLBACK_2(InitLayer::onTouchEnded, this);
     touchListenerInit->onTouchMoved = CC_CALLBACK_2(InitLayer::onTouchMoved, this);
     touchListenerInit->onTouchCancelled = CC_CALLBACK_2(InitLayer::onTouchCancelled, this);
 
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListenerInit, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListenerInit, this);*/
 
+    this->addChild(menu);
     this->scheduleUpdate();
 
     return true;

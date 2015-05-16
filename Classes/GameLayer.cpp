@@ -25,3 +25,8 @@ Player * GameLayer::getPlayer()
 {
 	return player;
 }
+
+void GameLayer::onActive()
+{
+    player->startGame();
+}
