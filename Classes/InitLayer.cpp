@@ -22,7 +22,7 @@ bool InitLayer::init()
 
     miLogo->setAnchorPoint(Vec2(0.5, 0.5));
     miLogo->setPosition(0,0);
-    miLogo->setScale(0.3f);
+    miLogo->setScale(0.2f);
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithItem(miLogo);
     menu->setPosition(visibleSize / 2);

@@ -34,7 +34,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     if (!glview)
     {
         glview = GLViewImpl::create("Win10Hacks");
-				glview->setFrameSize(540, 960);
+				glview->setFrameSize(360, 640);
         director->setOpenGLView(glview);
     }
     //glview->setDesignResolutionSize(960, 540, ResolutionPolicy::EXACT_FIT);
