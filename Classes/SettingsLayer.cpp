@@ -23,7 +23,7 @@ bool SettingsLayer::init()
     });
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithItem(miBack);
-    menu->setPosition(origin.x + visibleSize.width / 2.f, origin.y + visibleSize.height / 2.f);
+    menu->setPosition(origin.x + visibleSize.width / 4.f, origin.y + visibleSize.height / 4.f);
     menu->alignItemsVerticallyWithPadding(5.f);
 
     this->addChild(menu);
