@@ -1,6 +1,7 @@
 //#include "pch.h"
 #include "Player.h"
 #include "GameObject.h"
+#include "AnimationUtils.h"
 
 using namespace cocos2d;
 
@@ -127,7 +128,7 @@ void Player::boostUp()
 	if (verticalSpeed >= speedUp[currentLevel] && currentLevel <=3)
 	{
 		CCLOG("BOOOOOOST!!!!");
-		currentLevel++;
+		if (++currentLevel <= 3) runAnimation(String::createWithFormat("lvl%d", currentLevel)->getCString());
 	}
 }
 
@@ -191,4 +192,74 @@ void Player::keyReleased(EventKeyboard::KeyCode keyCode, cocos2d::Event * event)
 	{
 		horizontalSpeed = 0;
 	}
+}
+
+bool Player::onContactBegin(PhysicsContact& contact)
+{
+	auto nodeA = contact.getShapeA()->getBody()->getNode();
+	auto nodeB = contact.getShapeB()->getBody()->getNode();
+	
+	GameObject * other;
+
+	if (dynamic_cast<Player*>(nodeA) == this)
+	{
+		other = dynamic_cast<GameObject*>(nodeB);
+	}
+	else if (dynamic_cast<Player*>(nodeB) == this)
+	{
+		other = dynamic_cast<GameObject*>(nodeA);
+	}
+
+	if (other->type == GameObjectType::DESTRUCTIBLE)
+	{
+		endGame();
+		//end game screen
+	}
+	else
+	{
+		acceleration += 10;
+	}
+	
+	return true;
+}
+
+Player* Player::create(std::string fileName, std::string animationToRun, std::function<void()> callback)
+{
+    Player* animatedSprite{ new Player() };
+    animatedSprite->animationFile = fileName;
+
+    auto cache = SpriteFrameCache::getInstance();
+    cache->addSpriteFramesWithFile(String::createWithFormat("anims/%s.plist", fileName.c_str())->getCString());
+
+    if (animatedSprite->initWithSpriteFrameName(String::createWithFormat("anims/%s_01.png", fileName.c_str())->getCString()))
+    {
+        auto cache = AnimationCache::getInstance();
+        cache->addAnimationsWithFile(String::createWithFormat("anims/%s.plist", fileName.c_str())->getCString());
+
+        if (animationToRun != "")
+        {
+            if (callback)
+                animatedSprite->runAction(AnimationUtils::getAnimationWithCallback(String::createWithFormat("%s_%s", fileName.c_str(), animationToRun.c_str())->getCString(), callback));
+            else
+                animatedSprite->runAction(AnimationUtils::getAnimationRunningForever(String::createWithFormat("%s_%s", fileName.c_str(), animationToRun.c_str())->getCString()));
+        }
+
+        animatedSprite->autorelease();
+        animatedSprite->getTexture()->setAliasTexParameters();
+        animatedSprite->init();
+        animatedSprite->scheduleUpdate();
+
+        return animatedSprite;
+    }
+
+    CC_SAFE_DELETE(animatedSprite);
+    return nullptr;
+}
+
+void Player::runAnimation(std::string animationToRun, std::function<void()> callback)
+{
+    if (callback)
+        runAction(AnimationUtils::getAnimationWithCallback(String::createWithFormat("%s_%s", animationFile.c_str(), animationToRun.c_str())->getCString(), callback));
+    else
+        runAction(AnimationUtils::getAnimationRunningForever(String::createWithFormat("%s_%s", animationFile.c_str(), animationToRun.c_str())->getCString()));
 }

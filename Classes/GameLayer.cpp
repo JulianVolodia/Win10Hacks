@@ -12,7 +12,7 @@ bool GameLayer::init()
 		return false;
 	}
 
-	player = Player::create();
+	player = Player::create("zyrafa", "lvl0");
 	auto spawner = Spawner::create();
 	spawner->player = player;
 

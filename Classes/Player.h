@@ -7,7 +7,7 @@
 class Player : public cocos2d::Sprite
 {
 public:
-	CREATE_FUNC(Player);
+    static Player* create(std::string fileName, std::string animationToRun = "", std::function<void()> callback = nullptr);
 	void update(float);
 	void tick(float);
 	bool init();
@@ -26,6 +26,9 @@ public:
 	void startGame();
 	void endGame();
 	void resetGame();
+    void runAnimation(std::string animationToRun = "", std::function<void()> callback = nullptr);
+
+    std::string animationFile;
 	bool gameRunning{ false };
 	float horizontalSpeed{ 0 };
 	float acceleration{ 2 };
@@ -33,6 +36,9 @@ public:
 	int speedUp[5];
 	int accelerationBase[5];
 	int currentLevel = 0;
+
+    int accelerationBase[5];
+    int currentLevel = 0;
 	int horSpeed = 5;
 };
 

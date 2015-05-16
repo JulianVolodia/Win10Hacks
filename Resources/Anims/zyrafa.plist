@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>animations</key>
+	<dict>
+		<key>zyrafa_lvl0</key>
+		<dict>
+			<key>delay</key>
+			<real>0.1</real>
+			<key>frames</key>
+			<array>
+				<string>anims/zyrafa_01.png</string>
+				<string>anims/zyrafa_02.png</string>
+				<string>anims/zyrafa_03.png</string>
+				<string>anims/zyrafa_04.png</string>
+				<string>anims/zyrafa_05.png</string>
+				<string>anims/zyrafa_06.png</string>
+				<string>anims/zyrafa_07.png</string>
+				<string>anims/zyrafa_08.png</string>
+				<string>anims/zyrafa_09.png</string>
+			</array>
+		</dict>
+		<key>zyrafa_lvl1</key>
+		<dict>
+			<key>delay</key>
+			<real>0.1</real>
+			<key>frames</key>
+			<array>
+				<string>anims/zyrafa_10.png</string>
+				<string>anims/zyrafa_11.png</string>
+				<string>anims/zyrafa_12.png</string>
+				<string>anims/zyrafa_13.png</string>
+				<string>anims/zyrafa_14.png</string>
+				<string>anims/zyrafa_15.png</string>
+			</array>
+		</dict>
+		<key>zyrafa_lvl2</key>
+		<dict>
+			<key>delay</key>
+			<real>0.1</real>
+			<key>frames</key>
+			<array>
+				<string>anims/zyrafa_16.png</string>
+				<string>anims/zyrafa_17.png</string>
+				<string>anims/zyrafa_18.png</string>
+				<string>anims/zyrafa_19.png</string>
+				<string>anims/zyrafa_20.png</string>
+				<string>anims/zyrafa_21.png</string>
+			</array>
+		</dict>
+		<key>zyrafa_lvl3</key>
+		<dict>
+			<key>delay</key>
+			<real>0.1</real>
+			<key>frames</key>
+			<array>
+				<string>anims/zyrafa_22.png</string>
+				<string>anims/zyrafa_23.png</string>
+				<string>anims/zyrafa_24.png</string>
+				<string>anims/zyrafa_25.png</string>
+				<string>anims/zyrafa_26.png</string>
+				<string>anims/zyrafa_27.png</string>
+				<string>anims/zyrafa_28.png</string>
+				<string>anims/zyrafa_29.png</string>
+				<string>anims/zyrafa_30.png</string>
+				<string>anims/zyrafa_31.png</string>
+				<string>anims/zyrafa_32.png</string>
+				<string>anims/zyrafa_33.png</string>
+				<string>anims/zyrafa_34.png</string>
+				<string>anims/zyrafa_35.png</string>
+			</array>
+		</dict>
+	</dict>
+	<key>frames</key>
+	<dict>
+		<key>anims/zyrafa_01.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_02.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{91, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_03.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{182, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_04.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{273, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_05.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{364, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_06.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{455, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_07.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{546, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_08.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{637, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_09.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{728, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{819, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{910, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1001, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1092, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1183, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1274, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1365, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_17.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1456, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_18.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1547, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_19.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1638, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_20.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1729, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_21.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1820, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_22.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1911, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_23.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2002, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_24.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2093, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_25.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2184, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_26.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2275, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_27.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2366, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_28.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2457, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_29.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2548, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_30.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2639, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_31.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2730, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_32.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2821, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_33.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2912, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_34.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3003, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+		<key>anims/zyrafa_35.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3094, 0}, {91, 158}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{91, 158}</string>
+			<key>sourceSize</key>
+			<string>{91, 158}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{3185, 158}</string>
+	</dict>
+</dict>
+</plist>
+
