@@ -1,5 +1,5 @@
 #include "GameScene.h"
-
+#define DEBUG_PHYSICS 17892
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
@@ -11,6 +11,12 @@ bool GameScene::initWithPhysics()
     {
         return false;
     }
+
+		getPhysicsWorld()->setGravity(Vec2(0, 0));
+
+#ifdef DEBUG_PHYSICS 
+		getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+#endif
 
     mapLayers[GState::MENU] = MenuLayer::create();
     mapLayers[GState::INIT] = InitLayer::create();

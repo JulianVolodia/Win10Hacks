@@ -5,6 +5,7 @@
 class GameObject : public cocos2d::Sprite
 {
 public:
+	bool init();
 	void update(float);
 	Player * player;
 

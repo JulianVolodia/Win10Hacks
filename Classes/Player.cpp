@@ -17,8 +17,10 @@ bool Player::init()
 
 	CCLOG("log0");
 
-	this->setPosition(visibleSize / 2);
+	setPosition(Vec2(visibleSize.width/2, visibleSize.height / 4));
 
+	scheduleUpdate();
+	
 	touchListener = EventListenerTouchOneByOne::create();
 	touchListener->onTouchBegan = CC_CALLBACK_2(Player::onTouchBegan, this);
 	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
@@ -45,8 +47,10 @@ void Player::update(float dt)
 	{
 		this->setPositionX(getPositionX() + horizontalSpeed);
 	}
-
-	verticalSpeed += acceleration * dt;
+	if (gameRunning)
+	{
+		verticalSpeed += acceleration * dt;
+	}
 }
 
 bool Player::onTouchBegan(Touch* touch, Event* event)
@@ -89,14 +93,15 @@ void Player::boostUp()
 
 void Player::startGame()
 {
+	auto visibleSize = Director::getInstance()->getVisibleSize();
 	touchListener->setEnabled(true);
-	scheduleUpdate();
+	gameRunning = true;
 }
 
 void Player::endGame()
 {
 	touchListener->setEnabled(false);
-	unscheduleUpdate();
+	gameRunning = false;
 }
 
 void Player::resetGame()
