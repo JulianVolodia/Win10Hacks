@@ -85,6 +85,7 @@ bool MenuLayer::init()
     textField->setContentSize(Size(240, 160));
     textField->setAlignment(TextHAlignment::CENTER, TextVAlignment::CENTER);
     textField->setPosition(visibleSize.width / 2.f, 50);
+    textField->setColor(cocos2d::Color3B::BLACK);
 
     //textField->getString();
     //textField->addEventListener(CC_CALLBACK_2(UITextFieldTest_LineWrap::textFieldEvent, this));
