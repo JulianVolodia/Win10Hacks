@@ -36,6 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching()
         glview = GLViewImpl::create("Win10Hacks");
         director->setOpenGLView(glview);
     }
+    glview->setDesignResolutionSize(960, 540, ResolutionPolicy::EXACT_FIT);
 
     // turn on display FPS
     director->setDisplayStats(false);
