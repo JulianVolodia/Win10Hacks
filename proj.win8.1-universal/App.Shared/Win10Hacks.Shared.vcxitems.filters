@@ -14,6 +14,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
@@ -34,6 +35,15 @@
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp">
+=======
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.cpp">
+>>>>>>> Stashed changes
       <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -57,6 +67,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h">
       <Filter>Classes</Filter>
     </ClInclude>
@@ -79,6 +90,15 @@
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h">
+=======
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.h">
+>>>>>>> Stashed changes
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
