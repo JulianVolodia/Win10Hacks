@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>animations</key>
+	<dict>
+		<key>coin_turn</key>
+		<dict>
+			<key>delay</key>
+			<real>0.05</real>
+			<key>frames</key>
+			<array>
+				<string>anims/coin_01.png</string>
+				<string>anims/coin_02.png</string>
+				<string>anims/coin_03.png</string>
+				<string>anims/coin_04.png</string>
+				<string>anims/coin_05.png</string>
+				<string>anims/coin_06.png</string>
+				<string>anims/coin_07.png</string>
+				<string>anims/coin_08.png</string>
+				<string>anims/coin_09.png</string>
+				<string>anims/coin_10.png</string>
+				<string>anims/coin_11.png</string>
+				<string>anims/coin_12.png</string>
+				<string>anims/coin_13.png</string>
+				<string>anims/coin_14.png</string>
+				<string>anims/coin_15.png</string>
+				<string>anims/coin_16.png</string>
+			</array>
+		</dict>
+	</dict>
+	<key>frames</key>
+	<dict>
+		<key>anims/coin_01.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_02.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{60, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_03.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{120, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_04.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{180, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_05.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{240, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_06.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{300, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_07.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{360, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_08.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{420, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_09.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{480, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{540, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{600, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{660, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_13.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{720, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_14.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{780, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_15.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{840, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+		<key>anims/coin_16.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{900, 0}, {60, 60}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{60, 60}</string>
+			<key>sourceSize</key>
+			<string>{60, 60}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{960, 60}</string>
+	</dict>
+</dict>
+</plist>
+

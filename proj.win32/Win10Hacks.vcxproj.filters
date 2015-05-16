@@ -78,6 +78,9 @@
     <ClCompile Include="..\Classes\AnimationUtils.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Coin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -144,6 +147,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AnimationUtils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Coin.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
