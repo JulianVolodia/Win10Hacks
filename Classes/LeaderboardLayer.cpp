@@ -6,7 +6,8 @@ USING_NS_CC;
 
 bool LeaderboardLayer::init()
 {
-    if (!Layer::init()) return false;
+    if (!MainLayer::init())
+        return false;
 
     Leaderboard::push("Dalton", 100);
     Leaderboard::pull(5);

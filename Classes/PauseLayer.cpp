@@ -4,7 +4,7 @@ using namespace cocos2d;
 
 bool PauseLayer::init()
 {
-    if (!cocos2d::Layer::init())
+    if (!MainLayer::init())
     {
         return false;
     }

@@ -6,8 +6,8 @@ class GameSceneDefines
 public:
     static enum GameState
     {
-        GAME,
         INIT,
+        GAME,
         MENU,
         SETTINGS,
         CREDITS,
