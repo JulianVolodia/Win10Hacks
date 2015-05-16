@@ -1,5 +1,4 @@
-#ifndef __GAME_SCENE_H__
-#define __GAME_SCENE_H__
+#pragma once
 
 #include "cocos2d.h"
 #include "GameSceneDefines.h"
@@ -7,6 +6,11 @@
 #include "InitLayer.h"
 #include "GameLayer.h"
 #include "SettingsLayer.h"
+#include "AchievementsLayer.h"
+#include "CreditsLayer.h"
+#include "LeaderboardsLayer.h"
+#include "PauseLayer.h"
+#include "EndGameLayer.h"
 #include <map>
 
 class GameScene : public cocos2d::Scene
@@ -28,5 +32,3 @@ public:
 private:
     std::map<GameSceneDefines::GameState, cocos2d::Layer*> mapLayers;
 };
-
-#endif // __GAME_SCENE_H__

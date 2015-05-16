@@ -16,6 +16,11 @@ bool GameScene::init()
     mapLayers[GState::INIT] = InitLayer::create();
     mapLayers[GState::GAME] = GameLayer::create();
     mapLayers[GState::SETTINGS] = SettingsLayer::create();
+    mapLayers[GState::CREDITS] = CreditsLayer::create();
+    mapLayers[GState::LEADERBOARDS] = LeaderboardsLayer::create();
+    mapLayers[GState::ACHIEVEMENTS] = AchievementsLayer::create();
+    mapLayers[GState::ENDGAME] = EndGameLayer::create();
+    mapLayers[GState::PAUSE] = PauseLayer::create();
 
     for (unsigned int i = GState::INIT; i < GState::__END; ++i)
     {

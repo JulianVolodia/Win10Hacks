@@ -16,13 +16,17 @@
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AchievementsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\CreditsLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EndGameLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
@@ -34,14 +38,18 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)OpenGLESPage.xaml</DependentUpon>
     </ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AchievementsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\CreditsLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EndGameLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />

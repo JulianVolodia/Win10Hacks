@@ -10,13 +10,18 @@ public:
         MENU,
         GAME,
         SETTINGS,
+        CREDITS,
+        ACHIEVEMENTS,
+        LEADERBOARDS,
+        PAUSE,
+        ENDGAME,
         __END
     };
 
     static GameState activeState;
     static GameState queuedState;
 
-    //static std::map<GameState, GameState>
+
 };
 
 #endif // __GAME_SCENE_DEFINES_H__

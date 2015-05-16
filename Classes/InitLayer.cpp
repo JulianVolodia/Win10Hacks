@@ -13,9 +13,8 @@ bool InitLayer::init()
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
 
     cocos2d::Sprite * logo = cocos2d::Sprite::create("Misc/logo.png");
-		
-		logo->setScale(0.3f);
 
+    logo->setScale(0.3f);
     logo->setPosition(visibleSize / 2);
 
     this->addChild(logo);
