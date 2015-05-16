@@ -11,6 +11,9 @@ bool Player::init()
 	}
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
+	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
+
+	this->setPhysicsBody(physicsBody);
 
 	CCLOG("log0");
 
@@ -94,4 +97,10 @@ void Player::endGame()
 {
 	touchListener->setEnabled(false);
 	unscheduleUpdate();
+}
+
+void Player::resetGame()
+{
+	horizontalSpeed = 0;
+	acceleration = 5;
 }

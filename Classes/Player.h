@@ -15,6 +15,7 @@ public:
 	cocos2d::EventListenerTouchOneByOne * touchListener;
 	void startGame();
 	void endGame();
+	void resetGame();
 private:
 	float horizontalSpeed{ 0 };
 	float acceleration{ 5 };
