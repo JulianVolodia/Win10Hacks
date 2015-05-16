@@ -39,7 +39,7 @@ bool GameObject::init()
 
 void GameObject::update(float dt)
 {
-	this->setPositionY(getPositionY() - player->verticalSpeed*dt);
+	this->getPhysicsBody()->setVelocity(Vec2(0,-player->verticalSpeed));
 
 	if (this->getPositionY() < 0)
 	{

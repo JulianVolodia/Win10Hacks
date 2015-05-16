@@ -13,10 +13,12 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
-	physicsBody->setDynamic(true);
+	physicsBody->setDynamic(false);
 	this->setPhysicsBody(physicsBody);
 
 	CCLOG("log0");
+
+	schedule(CC_SCHEDULE_SELECTOR(Player::tick), 0.3f);
 
 	setPosition(Vec2(visibleSize.width/2, visibleSize.height / 4));
 
@@ -40,18 +42,7 @@ void Player::update(float dt)
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
-	if (this->getBoundingBox().getMinX() + horizontalSpeed < 0)
-	{
-		setPositionX(this->getBoundingBox().size.width / 2);
-	}
-	else if (this->getBoundingBox().getMaxX() + horizontalSpeed > visibleSize.width)
-	{
-		setPositionX(visibleSize.width - this->getBoundingBox().size.width / 2);
-	}
-	else
-	{
-		this->setPositionX(getPositionX() + horizontalSpeed);
-	}
+
 	if (gameRunning)
 	{
 		verticalSpeed += acceleration * dt;
@@ -66,6 +57,11 @@ void Player::update(float dt)
 	}
 }
 
+void Player::tick(float dt)
+{
+	getPhysicsBody()->setVelocity(Vec2(horizontalSpeed, 0));
+}
+
 bool Player::onTouchBegan(Touch* touch, Event* event)
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -76,11 +72,11 @@ bool Player::onTouchBegan(Touch* touch, Event* event)
 	{
 		if (position.x > visibleSize.width / 2)
 		{
-			horizontalSpeed = 10.0f;
+			horizontalSpeed = 30.0f;
 		}
 		else
 		{
-			horizontalSpeed = -10.0f;
+			horizontalSpeed = -30.0f;
 		}
 	}
 	else
