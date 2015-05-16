@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Player.h"
+#include "GameObject.h"
 
 using namespace cocos2d;
 
@@ -12,7 +13,8 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
-
+	physicsBody->setDynamic(false
+													);
 	this->setPhysicsBody(physicsBody);
 
 	CCLOG("log0");
@@ -26,6 +28,10 @@ bool Player::init()
 	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
 	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+
+	auto contactListener = EventListenerPhysicsContact::create();
+	contactListener->onContactBegin = CC_CALLBACK_1(Player::onContactBegin, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
 	return true;
 }
@@ -50,6 +56,14 @@ void Player::update(float dt)
 	if (gameRunning)
 	{
 		verticalSpeed += acceleration * dt;
+		if (acceleration - dt * 5 < 5)
+		{
+			acceleration = 5;
+		}
+		else
+		{
+			acceleration -= dt * 5;
+		}
 	}
 }
 
@@ -108,4 +122,33 @@ void Player::resetGame()
 {
 	horizontalSpeed = 0;
 	acceleration = 5;
+}
+
+bool Player::onContactBegin(PhysicsContact& contact)
+{
+	auto nodeA = contact.getShapeA()->getBody()->getNode();
+	auto nodeB = contact.getShapeB()->getBody()->getNode();
+	
+	GameObject * other;
+
+	if (dynamic_cast<Player*>(nodeA) == this)
+	{
+		other = dynamic_cast<GameObject*>(nodeB);
+	}
+	else if (dynamic_cast<Player*>(nodeB) == this)
+	{
+		other = dynamic_cast<GameObject*>(nodeA);
+	}
+
+	if (other->type == GameObjectType::DESTRUCTIBLE)
+	{
+		endGame();
+		//end game screen
+	}
+	else
+	{
+		acceleration += 10;
+	}
+	
+	return true;
 }

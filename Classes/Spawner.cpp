@@ -31,7 +31,7 @@ void Spawner::update(float dt)
 void Spawner::spawn()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
-	auto rock = Obstacle::create();
+	auto rock = GameObject::create();
 	
 	rock->setPositionY(visibleSize.height + rock->getBoundingBox().size.height);
 	
