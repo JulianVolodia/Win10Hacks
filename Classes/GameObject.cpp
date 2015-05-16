@@ -12,12 +12,15 @@ bool GameObject::init()
 
 	int r = rand() % 5;
 
+	auto physicalBody = PhysicsBody::create();
+
 	if (r > 1)
 	{
 		//PRZESZKODA
 		type = GameObjectType::DESTRUCTIBLE;
 		setTexture("CloseSelected.png");
 		setRotation(90.0f);
+		physicalBody->setTag(1);
 	}
 	else
 	{
@@ -25,11 +28,12 @@ bool GameObject::init()
 		type = GameObjectType::SPEEDUP;
 		setTexture("CloseSelected.png");
 		setRotation(-90.0f);
+		physicalBody->setTag(2);
 	}
 
-	auto physicalBody = PhysicsBody::createBox(getContentSize());
+	physicalBody->addShape(PhysicsShapeBox::create(getContentSize()));
 	physicalBody->setDynamic(true);
-
+	physicalBody->setContactTestBitmask(0xFFFFFFFF);
 	setPhysicsBody(physicalBody);
 
 	scheduleUpdate();

@@ -19,9 +19,8 @@ public:
 	void endGame();
 	void resetGame();
 	bool gameRunning{ false };
-private:
 	float horizontalSpeed{ 0 };
-	float acceleration{ 150 };
+	float acceleration{ 50 };
 	void boostUp();
 };
 
