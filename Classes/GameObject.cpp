@@ -10,30 +10,40 @@ bool GameObject::init()
 		return false;
 	}
 
-	int r = rand() % 5;
+	int r = rand() % 6;
 
 	auto physicalBody = PhysicsBody::create();
 
-	if (r > 1)
+	if (r > 2)
 	{
 		//PRZESZKODA
 		type = GameObjectType::DESTRUCTIBLE;
-		if (r == 2) setTexture("gfx/akacja.png");
-		if (r == 3) setTexture("gfx/duzy_kamien.png");
-		if (r == 4) setTexture("gfx/kloda.png");
-		setScale(2);
+		if (r == 3) setTexture("gfx/akacja.png");
+		if (r == 4) setTexture("gfx/duzy_kamien.png");
+		if (r == 5) setTexture("gfx/kloda.png");
 		physicalBody->setTag(1);
+		setScale(3.34);
+		physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*3.34));
+		
 	}
-	else
+	else if (r == 1)
 	{
 		//SPEEDUP
 		type = GameObjectType::SPEEDUP;
-		setTexture("CloseSelected.png");
-		setRotation(-90.0f);
+		setTexture("gfx/potionek.png");
 		physicalBody->setTag(2);
+		physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*1));
+	}
+	else
+	{
+		type = GameObjectType::COIN;
+		setTexture("gfx/potionek.png");
+		physicalBody->setTag(2);
+		physicalBody->addShape(PhysicsShapeBox::create(getContentSize() * 1));
 	}
 
-	physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*2));
+	getTexture()->setAliasTexParameters();
+
 	physicalBody->setDynamic(true);
 	physicalBody->setRotationEnable(false);
 	physicalBody->setContactTestBitmask(0xFFFFFFFF);

@@ -18,9 +18,14 @@ public:
 	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
+
+	void keyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event * event);
+	void keyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event * event);
+
 	bool onContactBegin(cocos2d::PhysicsContact& contact);
 	float verticalSpeed{ 150 };
 	cocos2d::EventListenerTouchOneByOne * touchListener;
+	cocos2d::EventListenerKeyboard * keyboardListener;
 	void startGame();
 	void endGame();
 	void resetGame();
@@ -32,7 +37,9 @@ public:
 	float acceleration{ 2 };
 	void boostUp();
 	int speedUp[5];
-    int accelerationBase[5];
-    int currentLevel = 0;
+	int accelerationBase[5];
+	int currentLevel = 0;
+  int accelerationBase[5];
+	int horSpeed = 5;
 };
 

@@ -2,7 +2,7 @@
 #include "cocos2d.h"
 #include "Player.h"
 
-enum class GameObjectType{ DESTRUCTIBLE, SPEEDUP };
+enum class GameObjectType{ DESTRUCTIBLE, SPEEDUP, COIN };
 
 class GameObject : public cocos2d::Sprite
 {

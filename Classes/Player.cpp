@@ -45,6 +45,11 @@ bool Player::init()
 	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 
+	keyboardListener = EventListenerKeyboard::create();
+	keyboardListener->onKeyPressed = CC_CALLBACK_2(Player::keyPressed, this);
+	keyboardListener->onKeyReleased = CC_CALLBACK_2(Player::keyReleased, this);
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
+
 	return true;
 }
 
@@ -135,6 +140,7 @@ void Player::startGame()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	touchListener->setEnabled(true);
+	keyboardListener->setEnabled(true);
 	gameRunning = true;
 
 	auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, visibleSize.height / 4));
@@ -148,6 +154,7 @@ void Player::endGame()
 {
 	CCLOG("CHUJ");
 	touchListener->setEnabled(false);
+	keyboardListener->setEnabled(false);
 	acceleration = 0;
 	verticalSpeed = 0;
 	gameRunning = false;
@@ -162,6 +169,37 @@ void Player::resetGame()
 {
 	horizontalSpeed = 0;
 	acceleration = 5;
+}
+
+void Player::keyPressed(EventKeyboard::KeyCode keyCode, cocos2d::Event * event)
+{
+	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
+	{
+		horizontalSpeed = -horSpeed;
+	}
+
+	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
+	{
+		horizontalSpeed = horSpeed;
+	}
+
+	if (keyCode == EventKeyboard::KeyCode::KEY_SPACE)
+	{
+		boostUp();
+	}
+}
+
+void Player::keyReleased(EventKeyboard::KeyCode keyCode, cocos2d::Event * event)
+{
+	if (keyCode == EventKeyboard::KeyCode::KEY_LEFT_ARROW)
+	{
+		horizontalSpeed = 0;
+	}
+
+	if (keyCode == EventKeyboard::KeyCode::KEY_RIGHT_ARROW)
+	{
+		horizontalSpeed = 0;
+	}
 }
 
 bool Player::onContactBegin(PhysicsContact& contact)
