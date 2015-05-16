@@ -13,14 +13,17 @@ bool InitLayer::init()
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
 
     cocos2d::Sprite * logo = cocos2d::Sprite::create("Misc/logo.png");
-    logo->setScale(0.3f);
+    logo->setAnchorPoint(Vec2(0.5, 0.5));
+    //logo->setScale(0.3f);
 
     MenuItemSprite * miLogo = MenuItemSprite::create(logo, logo, [&] (Ref* sender)
     {
         GameSceneDefines::queuedState = GameSceneDefines::MENU;
     });
 
+    miLogo->setAnchorPoint(Vec2(0.5, 0.5));
     miLogo->setPosition(0,0);
+    miLogo->setScale(0.3f);
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithItem(miLogo);
     menu->setPosition(visibleSize / 2);

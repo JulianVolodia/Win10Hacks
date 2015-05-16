@@ -8,13 +8,13 @@ public:
     {
         INIT,
         MENU,
-        GAME,
         SETTINGS,
         CREDITS,
         ACHIEVEMENTS,
         LEADERBOARDS,
         PAUSE,
         ENDGAME,
+        GAME,
         __END
     };
 
