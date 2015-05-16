@@ -1,5 +1,7 @@
 #pragma once
 #include "cocos2d.h"
+#include "GameSceneDefines.h"
+#include "EndGameLayer.h"
 
 class Player : public cocos2d::Sprite
 {

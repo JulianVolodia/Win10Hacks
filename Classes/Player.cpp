@@ -70,7 +70,7 @@ void Player::update(float dt)
 		{
 			verticalSpeed += acceleration * dt;
 		}
-		
+
 		if (acceleration - dt * accelerationBase[currentLevel] < accelerationBase[currentLevel])
 		{
 			acceleration = accelerationBase[currentLevel];
@@ -143,7 +143,9 @@ void Player::endGame()
 	acceleration = 0;
 	verticalSpeed = 0;
 	gameRunning = false;
+    EndGameLayer::saveScore(horizontalSpeed, 10);
 	horizontalSpeed = 0;
+    GameSceneDefines::queuedState = GameSceneDefines::ENDGAME;
 }
 
 void Player::resetGame()
