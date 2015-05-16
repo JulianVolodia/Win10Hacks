@@ -34,9 +34,9 @@ bool Spawner::init()
 	mapa2->setPosition(Vec2(0, visibleSize.height));
 	mapa3->setPosition(Vec2(0, 2 * visibleSize.height));
 
-	mapa1->setScale(3.34);
-	mapa2->setScale(3.34);
-	mapa3->setScale(3.34);
+	mapa1->setScale(2.23);
+	mapa2->setScale(2.23);
+	mapa3->setScale(2.23);
 
 	addChild(mapa1);
 	addChild(mapa2);

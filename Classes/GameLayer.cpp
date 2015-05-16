@@ -18,8 +18,9 @@ bool GameLayer::init()
 
 	this->addChild(player, 666);
 	this->addChild(spawner);
+	this->addChild(player->getButton(), 66);
 
-    this->scheduleUpdate();
+  this->scheduleUpdate();
 	return true;
 }
 

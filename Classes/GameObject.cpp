@@ -22,8 +22,8 @@ bool GameObject::init()
 		if (r == 4) setTexture("gfx/duzy_kamien.png");
 		if (r == 5) setTexture("gfx/kloda.png");
 		physicalBody->setTag(1);
-		setScale(3.34);
-		physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*3.34));
+		setScale(2);
+		physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*1.9));
 		
 	}
 	else if (r == 1)

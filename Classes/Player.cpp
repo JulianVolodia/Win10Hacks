@@ -12,7 +12,15 @@ bool Player::init()
 		return false;
 	}
 
+	auto visibleSize = Director::getInstance()->getVisibleSize();
+
 	setAnchorPoint(Vec2(0.5, 0.5));
+
+	button = Sprite::create();
+
+	button->setAnchorPoint(Vec2(0.5, 0.5));
+	button->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 8));
+	button->setScale(0.5);
 
 	speedUp[0] = 200;
 	speedUp[1] = 230;
@@ -26,7 +34,6 @@ bool Player::init()
 	accelerationBase[3] = 40;
 	accelerationBase[4] = 60;
 
-	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
 	physicsBody->setDynamic(false);
 	physicsBody->setContactTestBitmask(0xFFFFFFFF);
@@ -49,6 +56,8 @@ bool Player::init()
 	keyboardListener->onKeyPressed = CC_CALLBACK_2(Player::keyPressed, this);
 	keyboardListener->onKeyReleased = CC_CALLBACK_2(Player::keyReleased, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(keyboardListener, this);
+
+	setScale(0.75);
 
 	return true;
 }
@@ -77,6 +86,15 @@ void Player::update(float dt)
 			verticalSpeed += acceleration * dt;
 		}
 
+		if (verticalSpeed + acceleration * dt < speedUp[currentLevel])
+		{
+			button->setTexture("gfx/wylaczony.png");
+		}
+		else
+		{
+			button->setTexture("gfx/wlaczony.png");
+		}
+
 		if (acceleration - dt * accelerationBase[currentLevel] < accelerationBase[currentLevel])
 		{
 			acceleration = accelerationBase[currentLevel];
@@ -86,6 +104,9 @@ void Player::update(float dt)
 			acceleration -= dt * accelerationBase[currentLevel];
 		}
 	}
+
+
+
 }
 
 bool Player::onTouchBegan(Touch* touch, Event* event)
@@ -138,6 +159,7 @@ void Player::startGame()
 	touchListener->setEnabled(true);
 	keyboardListener->setEnabled(true);
 	gameRunning = true;
+	button->setTexture("gfx/wylaczony.png");
 
 	auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, visibleSize.height / 4));
 	runAction(moveTo);
@@ -263,4 +285,10 @@ void Player::runAnimation(std::string animationToRun, std::function<void()> call
         runAction(AnimationUtils::getAnimationWithCallback(String::createWithFormat("%s_%s", animationFile.c_str(), animationToRun.c_str())->getCString(), callback));
     else
         runAction(AnimationUtils::getAnimationRunningForever(String::createWithFormat("%s_%s", animationFile.c_str(), animationToRun.c_str())->getCString()));
+}
+
+
+Sprite * Player::getButton()
+{
+	return button;
 }
