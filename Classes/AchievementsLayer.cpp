@@ -17,8 +17,7 @@ bool AchievementsLayer::init()
     title->setColor(logoColor);
     this->addChild(title);
 
-    cocos2d::MenuItemFont * miBack = cocos2d::MenuItemFont::create("<<< Back");
-    miBack->setFontSize(20);
+    cocos2d::MenuItemLabel * miBack = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("<<< Back", "fonts/arial.ttf", fontSize));
     miBack->setCallback([&] (Ref* sender)
     {
         GameSceneDefines::queuedState = GameSceneDefines::MENU;
