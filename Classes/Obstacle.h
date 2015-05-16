@@ -4,6 +4,7 @@ class Obstacle : public GameObject
 {
 public:
 	bool init();
+	void update(float);
 	CREATE_FUNC(Obstacle);
 };
 
