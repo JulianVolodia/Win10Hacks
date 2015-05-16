@@ -33,7 +33,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClCompile>
@@ -60,7 +59,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClInclude>

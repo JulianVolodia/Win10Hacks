@@ -8,7 +8,7 @@
 #include "SettingsLayer.h"
 #include "AchievementsLayer.h"
 #include "CreditsLayer.h"
-#include "LeaderboardsLayer.h"
+#include "LeaderboardLayer.h"
 #include "PauseLayer.h"
 #include "EndGameLayer.h"
 #include <map>

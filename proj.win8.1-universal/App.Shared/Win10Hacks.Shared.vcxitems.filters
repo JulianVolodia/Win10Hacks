@@ -1,130 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <CLCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h" />
-    <CLCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Cocos2dRenderer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLES.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-<<<<<<< Updated upstream
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp">
-=======
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.cpp">
->>>>>>> Stashed changes
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AchievementsLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\CreditsLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EndGameLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
-  </ItemGroup>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Classes">
-      <UniqueIdentifier>{38ad799c-8c3c-44a2-8e41-516c8f62f556}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AchievementsLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\CreditsLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\EndGameLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Obstacle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Cocos2dRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLES.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AchievementsLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\CreditsLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EndGameLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Obstacle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLES.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-<<<<<<< Updated upstream
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h">
-=======
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.h">
->>>>>>> Stashed changes
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AchievementsLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\CreditsLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\EndGameLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml" />
