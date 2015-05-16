@@ -54,7 +54,9 @@ void GameScene::update(float dt)
             rand() % 2 == 0 ? moveLeft : moveRight, nullptr));
         mapLayers[GDef::queuedState]->runAction(Spawn::create(fadeIn,
             moveIn, nullptr));
+
         GDef::activeState = GDef::queuedState;
+        mapLayers[GDef::activeState]->onActive();
     }
 }
 

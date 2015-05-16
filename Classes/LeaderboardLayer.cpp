@@ -32,3 +32,8 @@ void LeaderboardLayer::update(float dt)
     }
     scoreboard->setString(board);
 }
+
+void LeaderboardLayer::onActive()
+{
+    Leaderboard::pull(5);
+}

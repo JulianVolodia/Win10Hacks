@@ -1,14 +1,17 @@
 #pragma once
 
 #include "cocos2d.h"
-#include "GameSceneDefines.h"
+#include "MainLayer.h"
 
-class CreditsLayer : public cocos2d::Layer
+class CreditsLayer : public MainLayer
 {
 public:
     virtual bool init();
 
     virtual void update(float dt)
+    {}
+
+    virtual void onActive()
     {}
 
     CREATE_FUNC(CreditsLayer);

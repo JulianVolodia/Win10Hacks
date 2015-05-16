@@ -4,10 +4,10 @@ using namespace cocos2d;
 
 bool InitLayer::init()
 {
-    if (!cocos2d::Layer::init())
+    /*if (!cocos2d::Layer::init())
     {
         return false;
-    }
+    }*/
 
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();

@@ -1,15 +1,17 @@
-#ifndef __INIT_LAYER_H__
-#define __INIT_LAYER_H__
+#pragma once
 
 #include "cocos2d.h"
-#include "GameSceneDefines.h"
+#include "MainLayer.h"
 
-class InitLayer : public cocos2d::Layer
+class InitLayer : public MainLayer
 {
 public:
     virtual bool init();
 
     virtual void update(float dt)
+    {}
+
+    virtual void onActive()
     {}
 
     virtual bool onTouchBegan(cocos2d::Touch*, cocos2d::Event*)
@@ -24,6 +26,4 @@ public:
 
     CREATE_FUNC(InitLayer);
 };
-
-#endif // __INIT_LAYER_H__
 

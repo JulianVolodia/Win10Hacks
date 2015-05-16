@@ -30,5 +30,5 @@ public:
     CREATE_FUNC(GameScene);
 
 private:
-    std::map<GameSceneDefines::GameState, cocos2d::Layer*> mapLayers;
+    std::map<GameSceneDefines::GameState, MainLayer*> mapLayers;
 };
