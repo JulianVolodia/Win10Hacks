@@ -17,6 +17,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp" />
+<<<<<<< Updated upstream
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp" />
@@ -26,6 +27,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
+=======
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.cpp" />
+>>>>>>> Stashed changes
     <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClCompile>
@@ -36,6 +43,7 @@
     </ClCompile>
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h" />
+<<<<<<< Updated upstream
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h" />
@@ -45,6 +53,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
+=======
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\TestScene.h" />
+>>>>>>> Stashed changes
     <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
     </ClInclude>

@@ -133,7 +133,7 @@
       <AdditionalIncludeDirectories>../../Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>false</SDLCheck>
     </ClCompile>
-   <PreBuildEvent>
+    <PreBuildEvent>
       <Command>
         xcopy "$(SolutionDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
         xcopy "$(SolutionDir)..\External\*.dll" "$(OutDir)" /D /Y /F
@@ -147,6 +147,7 @@
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
       <AdditionalIncludeDirectories>../../Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -156,8 +157,9 @@
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
       <AdditionalIncludeDirectories>../../Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-   <PreBuildEvent>
+    <PreBuildEvent>
       <Command>
         xcopy "$(SolutionDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
         xcopy "$(SolutionDir)..\External\*.dll" "$(OutDir)" /D /Y /F
@@ -181,7 +183,7 @@
       <AdditionalIncludeDirectories>../../Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>false</SDLCheck>
     </ClCompile>
-     <PreBuildEvent>
+    <PreBuildEvent>
       <Command>
         xcopy "$(SolutionDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
         xcopy "$(SolutionDir)..\External\*.dll" "$(OutDir)" /D /Y /F
