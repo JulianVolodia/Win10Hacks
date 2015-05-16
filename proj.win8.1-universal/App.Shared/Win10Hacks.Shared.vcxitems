@@ -30,6 +30,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SoundEngine.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.cpp" />
@@ -56,6 +57,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SoundEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Leaderboard.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\LeaderboardLayer.h" />
