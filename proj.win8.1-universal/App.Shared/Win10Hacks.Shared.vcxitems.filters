@@ -8,12 +8,34 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\HelloWorldScene.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Cocos2dRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLES.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -30,11 +52,35 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\AppMacros.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\HelloWorldScene.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLES.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameObject.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\GameSceneDefines.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\InitLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)OpenGLESPage.xaml" />

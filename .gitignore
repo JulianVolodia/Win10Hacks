@@ -12,6 +12,9 @@ proj.win8.1-universal/App.Windows/Generated Files/*
 [Dd]ebug*/
 [Rr]elease*/
 
+# Temporary resources
+Resources/Temp/*
+
 # User-specific files
 *.suo
 *.user
