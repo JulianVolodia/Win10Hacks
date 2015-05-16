@@ -11,14 +11,15 @@ public:
 	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
-	float verticalSpeed{ 0 };
+	float verticalSpeed{ 5 };
 	cocos2d::EventListenerTouchOneByOne * touchListener;
 	void startGame();
 	void endGame();
 	void resetGame();
+	bool gameRunning{ false };
 private:
 	float horizontalSpeed{ 0 };
-	float acceleration{ 5 };
+	float acceleration{ 15 };
 	void boostUp();
 };
 
