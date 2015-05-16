@@ -1,5 +1,7 @@
 #include "MenuLayer.h"
 
+using namespace cocos2d;
+
 bool MenuLayer::init()
 {
     //////////////////////////////
@@ -52,12 +54,35 @@ bool MenuLayer::init()
         GameSceneDefines::queuedState = GameSceneDefines::ACHIEVEMENTS;
     });
 
+    cocos2d::MenuItemLabel * miName = cocos2d::MenuItemLabel::create(cocos2d::Label::createWithTTF("Confirm", "fonts/arial.ttf", fontSize));
+    vecMenuItems.pushBack(miName);
+
+    miName->setCallback([&] (Ref* sender)
+    {
+        textField->detachWithIME();
+        textField->setVisible(false);
+        AchievementsLayer::name = textField->getString();
+    });
+
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithArray(vecMenuItems);
-    menu->setPosition(origin.x + visibleSize.width / 2.f, origin.y + visibleSize.height / 2.f);
+    menu->setPosition(visibleSize / 2.f);
     menu->alignItemsVerticallyWithPadding(5.f);
 
+    miName->setPosition(miName->getPosition() + Vec2(0, -30));
+
     this->addChild(menu);
+
+    textField = TextFieldTTF::textFieldWithPlaceHolder("Enter Your name here:", "fonts/arial.ttf", 30.f);
+
+    //textField->ignoreContentAdaptWithSize(false);
+    textField->setContentSize(Size(240, 160));
+    textField->setAlignment(TextHAlignment::CENTER, TextVAlignment::CENTER);
+    textField->setPosition(visibleSize.width / 2.f, 50);
+
+    //textField->getString();
+    //textField->addEventListener(CC_CALLBACK_2(UITextFieldTest_LineWrap::textFieldEvent, this));
+    this->addChild(textField);
 
     this->scheduleUpdate();
 

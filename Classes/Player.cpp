@@ -145,6 +145,7 @@ void Player::endGame()
 	verticalSpeed = 0;
 	gameRunning = false;
     EndGameLayer::saveScore(horizontalSpeed, 10);
+    Leaderboard::push(AchievementsLayer::name, horizontalSpeed);
 	horizontalSpeed = 0;
     AchievementsLayer::achieve(AchievementsLayer::FIRST_GAME);
     GameSceneDefines::queuedState = GameSceneDefines::ENDGAME;
@@ -160,7 +161,7 @@ bool Player::onContactBegin(PhysicsContact& contact)
 {
 	auto nodeA = contact.getShapeA()->getBody()->getNode();
 	auto nodeB = contact.getShapeB()->getBody()->getNode();
-	
+
 	GameObject * other;
 
 	if (dynamic_cast<Player*>(nodeA) == this)
@@ -181,7 +182,7 @@ bool Player::onContactBegin(PhysicsContact& contact)
 	{
 		acceleration += 10;
 	}
-	
+
 	return true;
 }
 

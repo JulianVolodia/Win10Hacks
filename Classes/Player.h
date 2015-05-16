@@ -3,6 +3,8 @@
 #include "GameSceneDefines.h"
 #include "EndGameLayer.h"
 #include "AchievementsLayer.h"
+#include "Leaderboard.h"
+#include "AchievementsLayer.h"
 
 class Player : public cocos2d::Sprite
 {

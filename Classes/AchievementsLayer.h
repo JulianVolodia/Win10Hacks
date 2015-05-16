@@ -3,6 +3,7 @@
 #include "cocos2d.h"
 #include "MainLayer.h"
 #include <map>
+#include <string>
 
 class AchievementsLayer : public MainLayer
 {
@@ -26,6 +27,8 @@ public:
     {
         mapA[code] = true;
     }
+
+    static std::string name;
 
 private:
     static std::map<ACHIEVEMENTS, bool> mapA;

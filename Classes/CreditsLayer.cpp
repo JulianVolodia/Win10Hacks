@@ -1,4 +1,4 @@
-#include "CreditsLayer.h"
+﻿#include "CreditsLayer.h"
 
 using namespace cocos2d;
 
@@ -24,8 +24,36 @@ bool CreditsLayer::init()
     });
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithItem(miBack);
-    menu->setPosition(origin.x + visibleSize.width / backX, origin.y + visibleSize.height / backY);
+    menu->setPosition(origin.x + visibleSize.width / backX, origin.y + visibleSize.height / backY / 2.f);
     menu->alignItemsVerticallyWithPadding(5.f);
+
+    Label * graphics = Label::createWithTTF("Graphics:", "fonts/arial.ttf", fontSize);
+    graphics->setPosition(visibleSize.width / 2, visibleSize.height * 9.f / 12.f);
+    graphics->setColor(logoColor);
+    this->addChild(graphics);
+
+    Label * graphics1 = Label::createWithTTF("Ola Wiak, Beata Lach", "fonts/arial.ttf", fontSize);
+    graphics1->setPosition(visibleSize.width / 2, visibleSize.height * 8.f / 12.f);
+    this->addChild(graphics1);
+
+    Label * audio = Label::createWithTTF("Audio:", "fonts/arial.ttf", fontSize);
+    audio->setPosition(visibleSize.width / 2, visibleSize.height * 6.f / 12.f);
+    audio->setColor(logoColor);
+    this->addChild(audio);
+
+    Label * audio1 = Label::createWithTTF("Adrian Szymczykiewicz", "fonts/arial.ttf", fontSize);
+    audio1->setPosition(visibleSize.width / 2, visibleSize.height * 5.f / 12.f);
+    this->addChild(audio1);
+
+    Label * programmers = Label::createWithTTF("Code:", "fonts/arial.ttf", fontSize);
+    programmers->setPosition(visibleSize.width / 2, visibleSize.height * 3.f / 12.f);
+    programmers->setColor(logoColor);
+    this->addChild(programmers);
+
+
+    Label * programmers1 = Label::createWithTTF("Kacper Domanski, Krzysiek Pachulski,\nPawel Kaczynski", "fonts/arial.ttf", fontSize);
+    programmers1->setPosition(visibleSize.width / 2, visibleSize.height * 2.f / 12.f);
+    this->addChild(programmers1);
 
     this->addChild(menu);
 
