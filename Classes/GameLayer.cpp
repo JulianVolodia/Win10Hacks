@@ -28,10 +28,10 @@ Player * GameLayer::getPlayer()
 
 void GameLayer::update(float dt)
 {
-    time += dt;
-    prog->use();
-    auto timeLoc = prog->getUniformLocationForName("u_time");
-    prog->setUniformLocationWith1f(timeLoc, time);
+    //time += dt;
+    //prog->use();
+    //auto timeLoc = prog->getUniformLocationForName("u_time");
+    //prog->setUniformLocationWith1f(timeLoc, time);
 }
 
 void GameLayer::setupPostProcess()

@@ -10,8 +10,27 @@ bool GameObject::init()
 		return false;
 	}
 
-	auto physicalBody = PhysicsBody::create();
+	int r = rand() % 5;
+
+	if (r > 1)
+	{
+		//PRZESZKODA
+		type = GameObjectType::DESTRUCTIBLE;
+		setTexture("CloseSelected.png");
+		setRotation(90.0f);
+	}
+	else
+	{
+		//SPEEDUP
+		type = GameObjectType::SPEEDUP;
+		setTexture("CloseSelected.png");
+		setRotation(-90.0f);
+	}
+
+	auto physicalBody = PhysicsBody::createBox(getContentSize());
 	setPhysicsBody(physicalBody);
+
+	scheduleUpdate();
 
 	return true;
 }
