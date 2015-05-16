@@ -3,6 +3,7 @@
 using namespace cocos2d;
 
 std::map<AchievementsLayer::ACHIEVEMENTS, bool> AchievementsLayer::mapA = std::map<AchievementsLayer::ACHIEVEMENTS, bool>();
+std::string AchievementsLayer::name = "";
 
 bool AchievementsLayer::init()
 {

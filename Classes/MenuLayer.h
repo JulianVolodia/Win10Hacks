@@ -2,6 +2,7 @@
 
 #include "cocos2d.h"
 #include "MainLayer.h"
+#include "AchievementsLayer.h"
 
 class MenuLayer : public MainLayer
 {
@@ -12,8 +13,14 @@ public:
     {}
 
     void onActive()
-    {}
+    {
+        textField->attachWithIME();
+    }
 
     CREATE_FUNC(MenuLayer);
+
+    cocos2d::TextFieldTTF * textField;
+
+
 };
 
