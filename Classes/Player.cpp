@@ -13,28 +13,26 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
-	physicsBody->setDynamic(true);
+	physicsBody->setDynamic(false);
+	physicsBody->setContactTestBitmask(0xFFFFFFFF);
+	physicsBody->setTag(0);
 	this->setPhysicsBody(physicsBody);
 
 	CCLOG("log0");
 
-	setPosition(Vec2(visibleSize.width/2, visibleSize.height / 4));
+	setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 4));
 
 	scheduleUpdate();
-	
+
 	touchListener = EventListenerTouchOneByOne::create();
 	touchListener->onTouchBegan = CC_CALLBACK_2(Player::onTouchBegan, this);
 	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
 	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 
-	auto contactListener = EventListenerPhysicsContact::create();
-	contactListener->onContactBegin = CC_CALLBACK_1(Player::onContactBegin, this);
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
-
 	return true;
 }
-	
+
 
 void Player::update(float dt)
 {
@@ -115,6 +113,7 @@ void Player::startGame()
 
 void Player::endGame()
 {
+	CCLOG("CHUJ");
 	touchListener->setEnabled(false);
 	acceleration = 0;
 	verticalSpeed = 0;
@@ -125,37 +124,4 @@ void Player::resetGame()
 {
 	horizontalSpeed = 0;
 	acceleration = 5;
-}
-
-bool Player::onContactBegin(PhysicsContact& contact)
-{
-	CCLOG("KONTAKT");
-	auto nodeA = contact.getShapeA()->getBody()->getNode();
-	auto nodeB = contact.getShapeB()->getBody()->getNode();
-	
-	GameObject * other;
-	if (nodeA && nodeB)
-	{
-		if (dynamic_cast<Player*>(nodeA) == this)
-		{
-			other = dynamic_cast<GameObject*>(nodeB);
-		}
-		else if (dynamic_cast<Player*>(nodeB) == this)
-		{
-			other = dynamic_cast<GameObject*>(nodeA);
-		}
-
-		if (other->type == GameObjectType::DESTRUCTIBLE)
-		{
-			endGame();
-			//end game screen
-		}
-		else
-		{
-			acceleration += 10;
-			other->removeFromParent();
-		}
-	}
-	
-	return true;
 }

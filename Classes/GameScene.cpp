@@ -1,4 +1,5 @@
 #include "GameScene.h"
+#include "GameObject.h"
 #define DEBUG_PHYSICS 17892
 USING_NS_CC;
 
@@ -11,6 +12,10 @@ bool GameScene::initWithPhysics()
     {
         return false;
     }
+
+		auto contactListener = EventListenerPhysicsContact::create();
+		contactListener->onContactBegin = CC_CALLBACK_1(GameScene::onContactBegin, this);
+		_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
@@ -119,4 +124,58 @@ GameScene* GameScene::createWithPhysics()
         CC_SAFE_DELETE(ret);
         return nullptr;
     }
+}
+
+
+bool GameScene::onContactBegin(PhysicsContact& contact)
+{
+	auto nodeA = contact.getShapeA()->getBody()->getNode();
+	auto nodeB = contact.getShapeB()->getBody()->getNode();
+
+	int tagA = contact.getShapeA()->getBody()->getTag();
+	int tagB = contact.getShapeB()->getBody()->getTag();
+
+	Player * player;
+	GameObject * other;
+	if (nodeA && nodeB)
+	{
+	CCLOG("KONTAKT");
+
+		if (tagA == 0)
+		{
+			player = dynamic_cast<Player*>(nodeA);
+			other = dynamic_cast<GameObject*>(nodeB);
+
+			if (tagB == 1)
+			{
+				player->endGame();
+				//end game screen
+			}
+			else if (tagB == 2)
+			{
+				CCLOG("PRZYŒPIESZ KURWA");
+				player->acceleration += 100;
+				other->removeFromParent();
+			}
+		}
+		else if (tagB == 0)
+		{
+			other = dynamic_cast<GameObject*>(nodeA);
+			player = dynamic_cast<Player*>(nodeB);
+
+			if (tagA == 1)
+			{
+				player->endGame();
+				//end game screen
+			}
+			else if (tagA == 2)
+			{
+				CCLOG("PRZYŒPIESZ KURWA");
+				player->acceleration += 100;
+				other->removeFromParent();
+			}
+		}
+	}
+
+	return true;
 }

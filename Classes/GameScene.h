@@ -26,6 +26,8 @@ public:
 
     virtual void update(float dt);
 
+		bool onContactBegin(cocos2d::PhysicsContact& contact);
+
     // implement the "static create()" method manually
 		static GameScene * createWithPhysics();
 private:
