@@ -19,7 +19,7 @@ public:
     typedef GameSceneDefines::GameState GState;
     typedef GameSceneDefines GDef;
 
-    virtual bool init();
+    virtual bool initWithPhysics();
 
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
@@ -27,8 +27,7 @@ public:
     virtual void update(float dt);
 
     // implement the "static create()" method manually
-    CREATE_FUNC(GameScene);
-
+		static GameScene * createWithPhysics();
 private:
     std::map<GameSceneDefines::GameState, cocos2d::Layer*> mapLayers;
 };
