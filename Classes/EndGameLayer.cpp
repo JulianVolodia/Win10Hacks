@@ -33,21 +33,21 @@ bool EndGameLayer::init()
     this->addChild(menu);
 
     Label * scoreLabel = Label::createWithTTF("Score: ", "fonts/arial.ttf", fontSize);
-    title->setPosition(visibleSize.width / 2 - 50, visibleSize.height);
-    title->setColor(logoColor);
+    scoreLabel->setPosition(visibleSize.width / 2 - 50, visibleSize.height);
+    scoreLabel->setColor(logoColor);
     this->addChild(scoreLabel);
 
     Label * coinsLabel = Label::createWithTTF("Coins: ", "fonts/arial.ttf", fontSize);
-    title->setPosition(visibleSize.width / 2 - 50, visibleSize.height * 3.f / 7.f);
-    title->setColor(logoColor);
+    coinsLabel->setPosition(visibleSize.width / 2 - 50, visibleSize.height * 3.f / 7.f);
+    coinsLabel->setColor(logoColor);
     this->addChild(coinsLabel);
 
     Label * scoreValue = Label::createWithTTF(std::to_string(speed), "fonts/arial.ttf", fontSize);
-    title->setPosition(visibleSize.width / 2, visibleSize.height);
+    scoreValue->setPosition(visibleSize.width / 2, visibleSize.height);
     this->addChild(scoreValue);
 
     Label * coinsValue = Label::createWithTTF(std::to_string(coins), "fonts/arial.ttf", fontSize);
-    title->setPosition(visibleSize.width / 2, visibleSize.height * 3.f / 7.f);
+    coinsValue->setPosition(visibleSize.width / 2, visibleSize.height * 3.f / 7.f);
     this->addChild(coinsValue);
 
     scheduleUpdate();

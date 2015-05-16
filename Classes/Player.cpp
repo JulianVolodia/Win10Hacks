@@ -145,6 +145,7 @@ void Player::endGame()
 	gameRunning = false;
     EndGameLayer::saveScore(horizontalSpeed, 10);
 	horizontalSpeed = 0;
+    AchievementsLayer::achieve(AchievementsLayer::FIRST_GAME);
     GameSceneDefines::queuedState = GameSceneDefines::ENDGAME;
 }
 
