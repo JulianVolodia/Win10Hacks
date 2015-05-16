@@ -38,9 +38,7 @@ public:
 	int speedUp[5];
 	int accelerationBase[5];
 	int currentLevel = 0;
-
-    int accelerationBase[5];
-    int currentLevel = 0;
+  int accelerationBase[5];
 	int horSpeed = 5;
 };
 
