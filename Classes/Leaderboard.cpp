@@ -58,7 +58,7 @@ void Leaderboard::pull(int much)
         size_t pos = 0;
         while ((pos = result.find(stringdelimiter)) != std::string::npos) {
             Entry e;
-            
+
             e.name = result.substr(0, pos);
             result.erase(0, pos + stringdelimiter.length());
 
