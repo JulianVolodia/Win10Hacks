@@ -6,16 +6,19 @@
 class GameLayer : public MainLayer
 {
 public:
-    bool init();
-    CREATE_FUNC(GameLayer);
-    Player * getPlayer();
+	bool init();
+	CREATE_FUNC(GameLayer);
+	Player * getPlayer();
 
-    virtual void update(float dt)
-    {}
+    void update(float dt);
+
+    void setupPostProcess();
 
     virtual void onActive();
-
 private:
-    Player * player;
+	Player * player;
+    cocos2d::GLProgram* prog;
+
+    float time{ 0 };
 };
 
