@@ -28,12 +28,13 @@ bool GameScene::initWithPhysics()
     for (unsigned int i = GState::INIT; i < GState::__END; ++i)
     {
         this->addChild(mapLayers[static_cast<GState>(i)]);
-        mapLayers[static_cast<GState>(i)]->setVisible(false);
+        mapLayers[static_cast<GState>(i)]->setOpacity(0);
         mapLayers[static_cast<GState>(i)]->setPosition(Vec2(visibleSize.width, 0));
         mapLayers[static_cast<GState>(i)]->setCascadeOpacityEnabled(true);
+        mapLayers[static_cast<GState>(i)]->setVisible(true);
     }
 
-    mapLayers[GameSceneDefines::activeState]->setVisible(true);
+    mapLayers[GameSceneDefines::activeState]->setOpacity(255);
     mapLayers[GameSceneDefines::activeState]->setPosition(Vec2(0, 0));
 
     this->scheduleUpdate();
@@ -54,15 +55,22 @@ void GameScene::update(float dt)
         auto moveLeft = MoveTo::create(0.5, Vec2(-visibleSize.width, 0));
         auto fadeIn = FadeIn::create(0.5);
         auto fadeOut = FadeOut::create(0.5);
-        mapLayers[GDef::queuedState]->setVisible(true);
-
+        auto fadeTo = FadeTo::create(0.5, 200);
 
         if (GDef::activeState == GState::INIT)
         {
             mapLayers[GDef::activeState]->runAction(fadeOut);
             mapLayers[GDef::queuedState]->setPosition(0, 0);
+            mapLayers[GDef::queuedState]->runAction(fadeTo);
+            mapLayers[GDef::GAME]->setPosition(0, 0);
+            mapLayers[GDef::GAME]->runAction(fadeIn);
+        }
+        else if (GDef::activeState == GState::GAME)
+        {
+            mapLayers[GDef::queuedState]->setPosition(0, 0);
             mapLayers[GDef::queuedState]->setOpacity(0);
-            mapLayers[GDef::queuedState]->runAction(fadeIn);
+            mapLayers[GDef::queuedState]->runAction(Spawn::create(fadeIn,
+                moveIn, nullptr));
         }
         else
         {
