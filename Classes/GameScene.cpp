@@ -1,5 +1,5 @@
 #include "GameScene.h"
-
+#define DEBUG_PHYSICS 17892
 USING_NS_CC;
 
 // on "init" you need to initialize your instance
@@ -15,7 +15,15 @@ bool GameScene::initWithPhysics()
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
 
-    mapLayers[GState::MENU] = MenuLayer::create();
+		getPhysicsWorld()->setGravity(Vec2(0, 0));
+
+#ifdef DEBUG_PHYSICS 
+		getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+#endif
+
+
+		
+		mapLayers[GState::MENU] = MenuLayer::create();
     mapLayers[GState::INIT] = InitLayer::create();
     mapLayers[GState::SETTINGS] = SettingsLayer::create();
     mapLayers[GState::CREDITS] = CreditsLayer::create();
