@@ -12,7 +12,7 @@ public:
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
 	float verticalSpeed{ 0 };
-	EventListenerTouchOneByOne * touchListener;
+	cocos2d::EventListenerTouchOneByOne * touchListener;
 	void startGame();
 	void endGame();
 private:

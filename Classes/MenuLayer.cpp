@@ -20,6 +20,10 @@ bool MenuLayer::init()
     vecMenuItems.pushBack(miNewGame);
     cocos2d::MenuItemFont * miSettings = cocos2d::MenuItemFont::create("Settings");
     vecMenuItems.pushBack(miSettings);
+    miSettings->setCallback([&] (Ref* sender)
+    {
+        GameSceneDefines::queuedState = GameSceneDefines::INIT;
+    });
     cocos2d::MenuItemFont * miLeaderboards = cocos2d::MenuItemFont::create("Leaderboards");
     vecMenuItems.pushBack(miLeaderboards);
     cocos2d::MenuItemFont * miCredits = cocos2d::MenuItemFont::create("Credits");
@@ -33,6 +37,8 @@ bool MenuLayer::init()
     menu->alignItemsVerticallyWithPadding(5.f);
 
     this->addChild(menu);
+
+    this->scheduleUpdate();
 
     return true;
 }

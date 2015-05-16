@@ -22,8 +22,6 @@ bool Player::init()
 	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 
-	scheduleUpdate();
-
 	return true;
 }
 	
@@ -89,9 +87,11 @@ void Player::boostUp()
 void Player::startGame()
 {
 	touchListener->setEnabled(true);
+	scheduleUpdate();
 }
 
 void Player::endGame()
 {
 	touchListener->setEnabled(false);
+	unscheduleUpdate();
 }
