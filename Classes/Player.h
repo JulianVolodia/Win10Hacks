@@ -4,7 +4,7 @@
 class Player : public cocos2d::Sprite
 {
 public:
-	CREATE_FUNC(Player);
+    static Player* create(std::string fileName, std::string animationToRun = "", std::function<void()> callback = nullptr);
 	void update(float);
 	bool init();
 
@@ -17,8 +17,11 @@ public:
 	void startGame();
 	void endGame();
 	void resetGame();
-	bool gameRunning{ false };
+    bool gameRunning{ false };
+    void runAnimation(std::string animationToRun = "", std::function<void()> callback = nullptr);
+
 private:
+    std::string animationFile;
 	float horizontalSpeed{ 0 };
 	float acceleration{ 15 };
 	void boostUp();
