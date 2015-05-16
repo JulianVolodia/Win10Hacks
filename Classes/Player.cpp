@@ -1,4 +1,4 @@
-#include "pch.h"
+//#include "pch.h"
 #include "Player.h"
 #include "GameObject.h"
 #include "AnimationUtils.h"
@@ -12,31 +12,42 @@ bool Player::init()
 		return false;
 	}
 
+	setAnchorPoint(Vec2(0.5, 0.5));
+
+	speedUp[0] = 200;
+	speedUp[1] = 230;
+	speedUp[2] = 280;
+	speedUp[3] = 350;
+	speedUp[4] = 500;
+
+	accelerationBase[0] = 5;
+	accelerationBase[1] = 10;
+	accelerationBase[2] = 25;
+	accelerationBase[3] = 40;
+	accelerationBase[4] = 60;
+
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
-	physicsBody->setDynamic(false
-													);
+	physicsBody->setDynamic(false);
+	physicsBody->setContactTestBitmask(0xFFFFFFFF);
+	physicsBody->setTag(0);
 	this->setPhysicsBody(physicsBody);
 
 	CCLOG("log0");
 
-	setPosition(Vec2(visibleSize.width/2, visibleSize.height / 4));
+	setPosition(Vec2(visibleSize.width / 2, - visibleSize.height / 4));
 
 	scheduleUpdate();
-	
+
 	touchListener = EventListenerTouchOneByOne::create();
 	touchListener->onTouchBegan = CC_CALLBACK_2(Player::onTouchBegan, this);
 	touchListener->onTouchEnded = CC_CALLBACK_2(Player::onTouchEnded, this);
 	touchListener->onTouchMoved = CC_CALLBACK_2(Player::onTouchMoved, this);
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 
-	auto contactListener = EventListenerPhysicsContact::create();
-	contactListener->onContactBegin = CC_CALLBACK_1(Player::onContactBegin, this);
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
-
 	return true;
 }
-	
+
 
 void Player::update(float dt)
 {
@@ -56,14 +67,18 @@ void Player::update(float dt)
 	}
 	if (gameRunning)
 	{
-		verticalSpeed += acceleration * dt;
-		if (acceleration - dt * 5 < 5)
+		if (verticalSpeed + acceleration * dt <= speedUp[currentLevel] + 3)
 		{
-			acceleration = 5;
+			verticalSpeed += acceleration * dt;
+		}
+
+		if (acceleration - dt * accelerationBase[currentLevel] < accelerationBase[currentLevel])
+		{
+			acceleration = accelerationBase[currentLevel];
 		}
 		else
 		{
-			acceleration -= dt * 5;
+			acceleration -= dt * accelerationBase[currentLevel];
 		}
 	}
 }
@@ -76,13 +91,13 @@ bool Player::onTouchBegan(Touch* touch, Event* event)
 
 	if (position.y > visibleSize.height / 5)
 	{
-		if (position.x > visibleSize.width / 2)
+		if (position.x > getPositionX())
 		{
-			horizontalSpeed = 10.0f;
+			horizontalSpeed = 5.0f;
 		}
 		else
 		{
-			horizontalSpeed = -10.0f;
+			horizontalSpeed = -5.0f;
 		}
 	}
 	else
@@ -92,10 +107,12 @@ bool Player::onTouchBegan(Touch* touch, Event* event)
 
 	return true;
 }
+
 void Player::onTouchEnded(Touch* touch, Event* event)
 {
 	horizontalSpeed = 0.0f;
 }
+
 void Player::onTouchMoved(Touch* touch, Event* event)
 {
 
@@ -103,7 +120,11 @@ void Player::onTouchMoved(Touch* touch, Event* event)
 
 void Player::boostUp()
 {
-	CCLOG("BOOOOOOST!!!!");
+	if (verticalSpeed >= speedUp[currentLevel] && currentLevel <=3)
+	{
+		CCLOG("BOOOOOOST!!!!");
+		if (++currentLevel <= 3) runAnimation(String::createWithFormat("lvl%d", currentLevel)->getCString());
+	}
 }
 
 void Player::startGame()
@@ -111,12 +132,22 @@ void Player::startGame()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	touchListener->setEnabled(true);
 	gameRunning = true;
+
+	auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, visibleSize.height / 4));
+	runAction(moveTo);
 }
 
 void Player::endGame()
 {
+	CCLOG("CHUJ");
 	touchListener->setEnabled(false);
+	acceleration = 0;
+	verticalSpeed = 0;
 	gameRunning = false;
+    EndGameLayer::saveScore(horizontalSpeed, 10);
+	horizontalSpeed = 0;
+    AchievementsLayer::achieve(AchievementsLayer::FIRST_GAME);
+    GameSceneDefines::queuedState = GameSceneDefines::ENDGAME;
 }
 
 void Player::resetGame()

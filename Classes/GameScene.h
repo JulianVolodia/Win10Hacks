@@ -11,6 +11,7 @@
 #include "LeaderboardLayer.h"
 #include "PauseLayer.h"
 #include "EndGameLayer.h"
+#include "SoundEngine.h"
 #include <map>
 
 class GameScene : public cocos2d::Scene
@@ -26,8 +27,12 @@ public:
 
     virtual void update(float dt);
 
+    bool onContactBegin(cocos2d::PhysicsContact& contact);
+
     // implement the "static create()" method manually
-		static GameScene * createWithPhysics();
+    static GameScene * createWithPhysics();
 private:
     std::map<GameSceneDefines::GameState, MainLayer*> mapLayers;
+
+    void preloadAudio();
 };

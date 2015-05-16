@@ -15,5 +15,14 @@ public:
     {}
 
     CREATE_FUNC(MainLayer);
+
+protected:
+    float backX = 4.f;
+    float backY = 6.f;
+    float titleHeight = 5.f / 6.f;
+    cocos2d::Color3B logoColor;
+    cocos2d::Color3B disableColor;
+    int titleSize = 40;
+    int fontSize = 30;
 };
 

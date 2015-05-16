@@ -14,7 +14,6 @@ bool InitLayer::init()
 
     cocos2d::Sprite * logo = cocos2d::Sprite::create("Misc/logo.png");
     logo->setAnchorPoint(Vec2(0.5, 0.5));
-    //logo->setScale(0.3f);
 
     MenuItemSprite * miLogo = MenuItemSprite::create(logo, logo, [&] (Ref* sender)
     {
@@ -38,6 +37,8 @@ bool InitLayer::init()
 
     this->addChild(menu);
     this->scheduleUpdate();
+
+    cocos2d::MenuItemFont::setFontSize(fontSize);
 
     return true;
 }
