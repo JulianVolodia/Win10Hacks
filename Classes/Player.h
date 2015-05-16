@@ -13,7 +13,7 @@ public:
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
 	bool onContactBegin(cocos2d::PhysicsContact& contact);
-	float verticalSpeed{ 75 };
+	float verticalSpeed{ 150 };
 	cocos2d::EventListenerTouchOneByOne * touchListener;
 	void startGame();
 	void endGame();

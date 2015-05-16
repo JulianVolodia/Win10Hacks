@@ -13,17 +13,17 @@ bool Player::init()
 
 	setAnchorPoint(Vec2(0.5, 0.5));
 
-	speedUp[0] = 100;
-	speedUp[1] = 120;
-	speedUp[2] = 150;
-	speedUp[3] = 200;
-	speedUp[4] = 250;
+	speedUp[0] = 200;
+	speedUp[1] = 230;
+	speedUp[2] = 280;
+	speedUp[3] = 350;
+	speedUp[4] = 500;
 
-	accelerationBase[0] = 2;
-	accelerationBase[1] = 4;
-	accelerationBase[2] = 6;
-	accelerationBase[3] = 10;
-	accelerationBase[4] = 15;
+	accelerationBase[0] = 5;
+	accelerationBase[1] = 10;
+	accelerationBase[2] = 25;
+	accelerationBase[3] = 40;
+	accelerationBase[4] = 60;
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
