@@ -2,7 +2,7 @@
 #include "GameLayer.h"
 #include "Player.h"
 #include "Spawner.h"
-
+#include "MiscObject.h"
 using namespace cocos2d;
 
 bool GameLayer::init()
@@ -16,6 +16,13 @@ bool GameLayer::init()
 	auto spawner = Spawner::create();
 	spawner->player = player;
 
+	auto bckg1 = MiscObject::create();
+	auto bckg2 = MiscObject::create();
+
+	bckg1->player = bckg2->player = player;
+	
+	this->addChild(bckg1);
+	this->addChild(bckg2);
 	this->addChild(player);
 	this->addChild(spawner);
 

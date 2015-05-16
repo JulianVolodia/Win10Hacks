@@ -12,6 +12,6 @@ public:
 	Player * player;
 	void spawn();
 private:
-	float distance{ 50.f };
+	float distance{ 45.f };
 	float lastDrop{ 0.0f };
 };

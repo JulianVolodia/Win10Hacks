@@ -18,7 +18,7 @@ bool Spawner::init()
 
 void Spawner::update(float dt)
 {
-	lastDrop += player->verticalSpeed*dt;
+	lastDrop += player->verticalSpeed * dt;
 
 	if (lastDrop > distance)
 	{

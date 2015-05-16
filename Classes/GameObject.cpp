@@ -18,8 +18,10 @@ bool GameObject::init()
 	{
 		//PRZESZKODA
 		type = GameObjectType::DESTRUCTIBLE;
-		setTexture("CloseSelected.png");
-		setRotation(90.0f);
+		if (r == 2) setTexture("gfx/akacja.png");
+		if (r == 3) setTexture("gfx/duzy_kamien.png");
+		if (r == 4) setTexture("gfx/kloda.png");
+		setScale(2);
 		physicalBody->setTag(1);
 	}
 	else
@@ -43,7 +45,7 @@ bool GameObject::init()
 
 void GameObject::update(float dt)
 {
-	this->getPhysicsBody()->setVelocity(Vec2(0,-player->verticalSpeed));
+	this->setPositionY(getPositionY() - player->verticalSpeed * dt);
 
 	if (this->getPositionY() < 0)
 	{

@@ -171,7 +171,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
 			else if (tagA == 2)
 			{
 				CCLOG("PRZYŒPIESZ KURWA");
-				player->acceleration += 100;
+				player->acceleration = player->accelerationBase[player->currentLevel+1];
 				other->removeFromParent();
 			}
 		}
