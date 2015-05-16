@@ -149,6 +149,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
             if (tagB == 1)
             {
                 player->endGame();
+                SoundEngine::playEffect("audio/Punch_sound_effect.wav", false, 0.5);
                 //end game screen
             }
             else if (tagB == 2)
@@ -156,6 +157,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
                 CCLOG("PRZYŒPIESZ KURWA");
                 player->acceleration += 100;
                 other->removeFromParent();
+                SoundEngine::playEffect("audio/bonusSFX.wav", false, 0.5);
             }
         }
         else if (tagB == 0)
@@ -166,6 +168,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
 			if (tagA == 1)
 			{
 				player->endGame();
+                SoundEngine::playEffect("audio/Punch_sound_effect.wav", false, 0.5);
 				//end game screen
 			}
 			else if (tagA == 2)
@@ -173,6 +176,7 @@ bool GameScene::onContactBegin(PhysicsContact& contact)
 				CCLOG("PRZYŒPIESZ KURWA");
 				player->acceleration = player->accelerationBase[player->currentLevel+1];
 				other->removeFromParent();
+                SoundEngine::playEffect("audio/bonusSFX.wav", false, 0.5);
 			}
 		}
 	}
@@ -186,7 +190,7 @@ void GameScene::preloadAudio()
     std::vector<std::string> effects;
 
     effects.push_back("audio/bonusSFX.wav");
-    //effects.push_back("audio/punch_sound_effect.mp3");
+    effects.push_back("audio/Punch_sound_effect.wav");
     effects.push_back("audio/rundirt_long.wav");
     effects.push_back("audio/sweep.wav");
 
