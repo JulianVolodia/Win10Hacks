@@ -13,8 +13,7 @@ bool Player::init()
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
-	physicsBody->setDynamic(false
-													);
+	physicsBody->setDynamic(true);
 	this->setPhysicsBody(physicsBody);
 
 	CCLOG("log0");
@@ -91,10 +90,12 @@ bool Player::onTouchBegan(Touch* touch, Event* event)
 
 	return true;
 }
+
 void Player::onTouchEnded(Touch* touch, Event* event)
 {
 	horizontalSpeed = 0.0f;
 }
+
 void Player::onTouchMoved(Touch* touch, Event* event)
 {
 
@@ -115,6 +116,8 @@ void Player::startGame()
 void Player::endGame()
 {
 	touchListener->setEnabled(false);
+	acceleration = 0;
+	verticalSpeed = 0;
 	gameRunning = false;
 }
 
@@ -126,28 +129,32 @@ void Player::resetGame()
 
 bool Player::onContactBegin(PhysicsContact& contact)
 {
+	CCLOG("KONTAKT");
 	auto nodeA = contact.getShapeA()->getBody()->getNode();
 	auto nodeB = contact.getShapeB()->getBody()->getNode();
 	
 	GameObject * other;
+	if (nodeA && nodeB)
+	{
+		if (dynamic_cast<Player*>(nodeA) == this)
+		{
+			other = dynamic_cast<GameObject*>(nodeB);
+		}
+		else if (dynamic_cast<Player*>(nodeB) == this)
+		{
+			other = dynamic_cast<GameObject*>(nodeA);
+		}
 
-	if (dynamic_cast<Player*>(nodeA) == this)
-	{
-		other = dynamic_cast<GameObject*>(nodeB);
-	}
-	else if (dynamic_cast<Player*>(nodeB) == this)
-	{
-		other = dynamic_cast<GameObject*>(nodeA);
-	}
-
-	if (other->type == GameObjectType::DESTRUCTIBLE)
-	{
-		endGame();
-		//end game screen
-	}
-	else
-	{
-		acceleration += 10;
+		if (other->type == GameObjectType::DESTRUCTIBLE)
+		{
+			endGame();
+			//end game screen
+		}
+		else
+		{
+			acceleration += 10;
+			other->removeFromParent();
+		}
 	}
 	
 	return true;

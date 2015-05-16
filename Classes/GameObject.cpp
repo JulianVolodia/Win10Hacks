@@ -28,6 +28,8 @@ bool GameObject::init()
 	}
 
 	auto physicalBody = PhysicsBody::createBox(getContentSize());
+	physicalBody->setDynamic(true);
+
 	setPhysicsBody(physicalBody);
 
 	scheduleUpdate();
