@@ -1,4 +1,4 @@
-#include "pch.h"
+//#include "pch.h"
 #include "GameObject.h"
 
 using namespace cocos2d;
@@ -33,7 +33,7 @@ bool GameObject::init()
 		physicalBody->setTag(2);
 	}
 
-	physicalBody->addShape(PhysicsShapeBox::create(getContentSize()));
+	physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*2));
 	physicalBody->setDynamic(true);
 	physicalBody->setContactTestBitmask(0xFFFFFFFF);
 	setPhysicsBody(physicalBody);

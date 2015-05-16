@@ -1,7 +1,7 @@
-#include "pch.h"
+//#include "pch.h"
 #include "Leaderboard.h"
 #include "cocos2d.h"
-#include "cocos/network/HttpClient.h"
+#include "HttpClient.h"
 
 USING_NS_CC;
 
