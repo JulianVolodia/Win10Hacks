@@ -1,15 +1,19 @@
-#ifndef __SETTINGS_LAYER_H__
-#define __SETTINGS_LAYER_H__
+#pragma once
 
 #include "cocos2d.h"
+#include "MainLayer.h"
 
-class SettingsLayer : public cocos2d::Layer
+class SettingsLayer : public MainLayer
 {
 public:
     virtual bool init();
 
+    virtual void update(float dt)
+    {}
+
+    void onActive()
+    {}
+
     CREATE_FUNC(SettingsLayer);
 };
-
-#endif // __SETTINGS_LAYER_H__
 

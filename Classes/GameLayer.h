@@ -1,8 +1,9 @@
 #pragma once
 #include "cocos2d.h"
 #include "Player.h"
+#include "MainLayer.h"
 
-class GameLayer : public cocos2d::Layer
+class GameLayer : public MainLayer
 {
 public:
 	bool init();
@@ -12,6 +13,8 @@ public:
     void update(float dt);
 
     void setupPostProcess();
+
+    virtual void onActive();
 private:
 	Player * player;
     cocos2d::GLProgram* prog;

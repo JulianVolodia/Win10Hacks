@@ -18,18 +18,38 @@ bool MenuLayer::init()
     // Menu items on the main menu
     cocos2d::MenuItemFont * miNewGame = cocos2d::MenuItemFont::create("New Game");
     vecMenuItems.pushBack(miNewGame);
+    miNewGame->setCallback([&] (Ref* sender)
+    {
+        GameSceneDefines::queuedState = GameSceneDefines::GAME;
+    });
+
     cocos2d::MenuItemFont * miSettings = cocos2d::MenuItemFont::create("Settings");
     vecMenuItems.pushBack(miSettings);
     miSettings->setCallback([&] (Ref* sender)
     {
-        GameSceneDefines::queuedState = GameSceneDefines::INIT;
+        GameSceneDefines::queuedState = GameSceneDefines::SETTINGS;
     });
+
     cocos2d::MenuItemFont * miLeaderboards = cocos2d::MenuItemFont::create("Leaderboards");
     vecMenuItems.pushBack(miLeaderboards);
+    miLeaderboards->setCallback([&] (Ref* sender)
+    {
+        GameSceneDefines::queuedState = GameSceneDefines::LEADERBOARDS;
+    });
+
     cocos2d::MenuItemFont * miCredits = cocos2d::MenuItemFont::create("Credits");
     vecMenuItems.pushBack(miCredits);
+    miCredits->setCallback([&] (Ref* sender)
+    {
+        GameSceneDefines::queuedState = GameSceneDefines::CREDITS;
+    });
+
     cocos2d::MenuItemFont * miAchievements = cocos2d::MenuItemFont::create("Achievements");
     vecMenuItems.pushBack(miAchievements);
+    miAchievements->setCallback([&] (Ref* sender)
+    {
+        GameSceneDefines::queuedState = GameSceneDefines::ACHIEVEMENTS;
+    });
 
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithArray(vecMenuItems);

@@ -1,9 +1,9 @@
 #pragma once
 
 #include "cocos2d.h"
-#include "MainLayer.h"
+#include "GameSceneDefines.h"
 
-class MenuLayer : public MainLayer
+class MainLayer : public cocos2d::Layer
 {
 public:
     virtual bool init();
@@ -11,9 +11,9 @@ public:
     virtual void update(float dt)
     {}
 
-    void onActive()
+    virtual void onActive()
     {}
 
-    CREATE_FUNC(MenuLayer);
+    CREATE_FUNC(MainLayer);
 };
 

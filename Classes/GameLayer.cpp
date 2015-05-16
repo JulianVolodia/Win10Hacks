@@ -7,10 +7,10 @@ using namespace cocos2d;
 
 bool GameLayer::init()
 {
-	if (!Layer::init())
+	/*if (!Layer::init())
 	{
 		return false;
-	}
+	}*/
 
 	player = Player::create();
 	auto spawner = Spawner::create();
@@ -70,4 +70,9 @@ void GameLayer::setupPostProcess()
     ShaderCache::getInstance()->addProgram(prog, "clouds");
     setShaderProgram(prog);
     prog->release();
+}
+
+void GameLayer::onActive()
+{
+    player->startGame();
 }
