@@ -10,8 +10,12 @@ public:
 	bool init();
 	void update(float);
 	Player * player;
-	void spawn();
+	void spawnGameObject();
+	void spawnMiscObject();
 private:
-	float distance{ 45.f };
-	float lastDrop{ 0.0f };
+	float gameObjectDistance{ 150.f };
+	float gameObjectlastDrop{ 0.0f };
+	float miscObjectDistance{ 20.f };
+	float miscObjectlastDrop{ 0.0f };
+
 };

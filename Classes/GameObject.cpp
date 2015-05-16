@@ -34,7 +34,8 @@ bool GameObject::init()
 	}
 
 	physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*2));
-	physicalBody->setDynamic(false);
+	physicalBody->setDynamic(true);
+	physicalBody->setRotationEnable(false);
 	physicalBody->setContactTestBitmask(0xFFFFFFFF);
 	setPhysicsBody(physicalBody);
 
@@ -47,7 +48,7 @@ void GameObject::update(float dt)
 {
 	this->setPositionY(getPositionY() - player->verticalSpeed * dt);
 
-	if (this->getPositionY() < 0)
+	if (getBoundingBox().getMaxY() <= 0)
 	{
 		this->removeFromParent();
 	}

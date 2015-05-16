@@ -9,6 +9,15 @@ bool MiscObject::init()
 		return false;
 	}
 
+	int r = rand() % 4;
+
+	if (r == 0) setTexture("gfx/trawa.png");
+	if (r == 1) setTexture("gfx/trawa_kamien.png");
+	if (r == 2) setTexture("gfx/kamienie.png");
+	if (r == 3) setTexture("gfx/sucha_trawka.png");
+
+	setScale(2);
+
 	scheduleUpdate();
 
 	return true;
@@ -18,8 +27,8 @@ void MiscObject::update(float dt)
 {
 	this->setPositionY(getPositionY() - player->verticalSpeed * dt);
 
-	if (getPositionY() <= 0)
+	if (getBoundingBox().getMaxY() <= 0)
 	{
-		setPositionY(getPositionY() + 2 * getContentSize().height);
+		removeFromParent();
 	}
 }
