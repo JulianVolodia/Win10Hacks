@@ -20,6 +20,11 @@ bool LeaderboardLayer::init()
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
 
+    Label * title = Label::createWithTTF("LEADERBOARDS", "fonts/arial.ttf", titleSize);
+    title->setPosition(visibleSize.width / 2, visibleSize.height * titleHeight);
+    title->setColor(logoColor);
+    this->addChild(title);
+
     cocos2d::MenuItemFont * miBack = cocos2d::MenuItemFont::create("<<< Back");
     miBack->setCallback([&] (Ref* sender)
     {
@@ -27,7 +32,8 @@ bool LeaderboardLayer::init()
     });
 
     cocos2d::Menu * menu = cocos2d::Menu::createWithItem(miBack);
-    menu->setPosition(origin.x + visibleSize.width / 4.f, origin.y + visibleSize.height / 4.f);    menu->alignItemsVerticallyWithPadding(5.f);
+    menu->setPosition(origin.x + visibleSize.width / backX, origin.y + visibleSize.height / backY);
+    menu->alignItemsVerticallyWithPadding(5.f);
 
     this->addChild(menu);
 
@@ -38,7 +44,7 @@ bool LeaderboardLayer::init()
 
 void LeaderboardLayer::update(float dt)
 {
-    std::string board = "Leaderboards:\n";
+    std::string board = " \n";
     int count = 5;
     for (auto score : Leaderboard::scores)
     {

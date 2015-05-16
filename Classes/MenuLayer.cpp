@@ -16,7 +16,6 @@ bool MenuLayer::init()
     cocos2d::Vector<cocos2d::MenuItem*> vecMenuItems;
 
     // Menu items on the main menu
-    cocos2d::MenuItemFont::setFontSize(40);
     cocos2d::MenuItemFont * miNewGame = cocos2d::MenuItemFont::create("New Game");
 
     vecMenuItems.pushBack(miNewGame);
