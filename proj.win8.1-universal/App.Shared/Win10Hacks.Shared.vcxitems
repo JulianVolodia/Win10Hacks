@@ -28,7 +28,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MainLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Obstacle.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.cpp" />
@@ -55,7 +54,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MainLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\MenuLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\PauseLayer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Obstacle.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\SettingsLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Player.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)..\..\Classes\Spawner.h" />
