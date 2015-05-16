@@ -6,6 +6,7 @@ class GameSceneDefines
 public:
     static enum GameState
     {
+        GAME,
         INIT,
         MENU,
         SETTINGS,
@@ -14,7 +15,6 @@ public:
         LEADERBOARDS,
         PAUSE,
         ENDGAME,
-        GAME,
         __END
     };
 
