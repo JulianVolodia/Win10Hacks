@@ -7,10 +7,10 @@ using namespace cocos2d;
 
 bool GameLayer::init()
 {
-	/*if (!Layer::init())
+    if (!MainLayer::init())
 	{
 		return false;
-	}*/
+	}
 
 	player = Player::create();
 	auto spawner = Spawner::create();

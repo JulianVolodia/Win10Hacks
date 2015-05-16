@@ -59,16 +59,15 @@ void GameScene::update(float dt)
 
         if (GDef::activeState == GState::INIT)
         {
-            mapLayers[GDef::activeState]->runAction(fadeOut);
+            mapLayers[GDef::activeState]->runAction(Sequence::create(fadeOut, moveRight, nullptr));
             mapLayers[GDef::queuedState]->setPosition(0, 0);
             mapLayers[GDef::queuedState]->runAction(fadeTo);
-            mapLayers[GDef::GAME]->setPosition(0, 0);
-            mapLayers[GDef::GAME]->runAction(fadeIn);
+            mapLayers[GState::GAME]->setPosition(0, 0);
+            mapLayers[GState::GAME]->runAction(fadeIn);
         }
         else if (GDef::activeState == GState::GAME)
         {
             mapLayers[GDef::queuedState]->setPosition(0, 0);
-            mapLayers[GDef::queuedState]->setOpacity(0);
             mapLayers[GDef::queuedState]->runAction(Spawn::create(fadeIn,
                 moveIn, nullptr));
         }
@@ -78,6 +77,9 @@ void GameScene::update(float dt)
                 rand() % 2 == 0 ? moveLeft : moveRight, nullptr));
             mapLayers[GDef::queuedState]->runAction(Spawn::create(fadeIn,
                 moveIn, nullptr));
+           /* mapLayers[GDef::activeState]->runAction(moveRight);
+            mapLayers[GDef::queuedState]->setPosition(0, 0);
+            mapLayers[GDef::queuedState]->setOpacity(255);*/
         }
 
 

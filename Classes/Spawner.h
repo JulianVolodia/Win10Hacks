@@ -1,6 +1,7 @@
 #pragma once
 #include "cocos2d.h"
 #include "Player.h"
+#include "GameObject.h"
 
 class Spawner : public cocos2d::Node
 {

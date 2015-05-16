@@ -4,7 +4,7 @@ bool MenuLayer::init()
 {
     //////////////////////////////
     // 1. super init first
-    if (!cocos2d::Layer::init())
+    if (!MainLayer::init())
     {
         return false;
     }

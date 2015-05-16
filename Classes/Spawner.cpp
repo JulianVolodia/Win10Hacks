@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Spawner.h"
 #include "GameLayer.h"
-#include "Obstacle.h"
 
 using namespace cocos2d;
 
@@ -32,9 +31,9 @@ void Spawner::spawn()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto rock = GameObject::create();
-	
+
 	rock->setPositionY(visibleSize.height + rock->getBoundingBox().size.height);
-	
+
 	rock->player = player;
 	float x = rand() % (int)visibleSize.width * 8;
 

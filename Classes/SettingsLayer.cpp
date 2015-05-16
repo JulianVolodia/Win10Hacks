@@ -4,7 +4,7 @@ USING_NS_CC;
 
 bool SettingsLayer::init()
 {
-    if (!cocos2d::Layer::init())
+    if (!MainLayer::init())
     {
         return false;
     }
