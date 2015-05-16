@@ -5,7 +5,7 @@
 #include "GameSceneDefines.h"
 #include "MenuLayer.h"
 #include "InitLayer.h"
-//#include "GameLayer.h"
+#include "GameLayer.h"
 #include "SettingsLayer.h"
 #include <map>
 

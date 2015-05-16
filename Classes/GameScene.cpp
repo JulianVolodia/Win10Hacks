@@ -14,7 +14,7 @@ bool GameScene::init()
 
     mapLayers[GState::MENU] = MenuLayer::create();
     mapLayers[GState::INIT] = InitLayer::create();
-    mapLayers[GState::GAME] = InitLayer::create();
+    mapLayers[GState::GAME] = GameLayer::create();
     mapLayers[GState::SETTINGS] = SettingsLayer::create();
 
     for (unsigned int i = GState::INIT; i < GState::__END; ++i)
