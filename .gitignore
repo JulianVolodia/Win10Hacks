@@ -6,6 +6,7 @@ cocos2d/*
 
 # Generated
 proj.win8.1-universal/App.WindowsPhone/Generated Files/*
+proj.win8.1-universal/App.Windows/Generated Files/*
 
 # All debugs and releases
 [Dd]ebug*/
