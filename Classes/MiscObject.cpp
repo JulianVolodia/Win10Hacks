@@ -9,12 +9,10 @@ bool MiscObject::init()
 		return false;
 	}
 
-	int r = rand() % 4;
+	int r = rand() % 1;
 
-	if (r == 0) setTexture("gfx/trawa.png");
 	if (r == 1) setTexture("gfx/trawa_kamien.png");
 	if (r == 2) setTexture("gfx/kamienie.png");
-	if (r == 3) setTexture("gfx/sucha_trawka.png");
 
 	setScale(2);
 

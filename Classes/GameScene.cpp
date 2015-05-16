@@ -1,6 +1,5 @@
 #include "GameScene.h"
 #include "GameObject.h"
-#define DEBUG_PHYSICS 17892
 USING_NS_CC;
 
 // on "init" you need to initialize your instance

@@ -10,10 +10,12 @@ public:
 	bool init();
 	void update(float);
 	Player * player;
+	cocos2d::Sprite * mapa1;
+	cocos2d::Sprite * mapa2;
+	cocos2d::Sprite * mapa3;
 	void spawnGameObject();
 	void spawnMiscObject();
-private:
-	float gameObjectDistance{ 150.f };
+	float gameObjectDistance{ 120.f };
 	float gameObjectlastDrop{ 0.0f };
 	float miscObjectDistance{ 20.f };
 	float miscObjectlastDrop{ 0.0f };
