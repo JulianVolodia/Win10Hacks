@@ -34,7 +34,7 @@ bool GameObject::init()
 	}
 
 	physicalBody->addShape(PhysicsShapeBox::create(getContentSize()*2));
-	physicalBody->setDynamic(true);
+	physicalBody->setDynamic(false);
 	physicalBody->setContactTestBitmask(0xFFFFFFFF);
 	setPhysicsBody(physicalBody);
 
