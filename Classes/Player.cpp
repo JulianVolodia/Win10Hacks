@@ -125,6 +125,10 @@ void Player::boostUp()
 		CCLOG("BOOOOOOST!!!!");
 		if (++currentLevel <= 3) runAnimation(String::createWithFormat("lvl%d", currentLevel)->getCString());
 	}
+
+    SoundEngine::stopBackground();
+    SoundEngine::playEffect("audio/sweep.wav", false, 1.0);
+    SoundEngine::playBackground("audio/afryka_1_mock_up_" + std::to_string(currentLevel) + ".wav", 1.0, true);
 }
 
 void Player::startGame()
@@ -135,6 +139,9 @@ void Player::startGame()
 
 	auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, visibleSize.height / 4));
 	runAction(moveTo);
+    SoundEngine::stopBackground();
+    SoundEngine::playBackground("audio/afryka_1_mock_up.wav", 1.0, true);
+    SoundEngine::playEffect("audio/rundirt_long.wav", true, 0.5);
 }
 
 void Player::endGame()

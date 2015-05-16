@@ -72,6 +72,12 @@
     <ClCompile Include="..\Classes\TestScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\SoundEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AnimationUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -132,6 +138,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TestScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SoundEngine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AnimationUtils.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

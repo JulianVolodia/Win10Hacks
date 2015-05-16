@@ -25,7 +25,7 @@ void SoundEngine::playBackground(std::string file, float volume, bool repeat)
 }
 
 int SoundEngine::playEffect(std::string file, bool repeat,
-                            float volume = 1.0f, float pitch = 1.0f, float pan = 0.0f)
+                            float volume, float pitch, float pan)
 {
     auto audio = CocosDenshion::SimpleAudioEngine::getInstance();
     audio->setEffectsVolume(volume);

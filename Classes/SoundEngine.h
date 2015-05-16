@@ -13,7 +13,7 @@ public:
 
     static void playBackground(std::string file, float volume, bool repeat);
     static int playEffect(std::string file, bool repeat,
-                          float volume, float pitch, float pan);
+                          float volume = 1.0f, float pitch = 1.0f, float pan = 0.0f);
 
     static void setBackgroundVolume(float volume);
     static void setEffectsVolume(float volume);
