@@ -12,7 +12,10 @@ public:
     {}
 
     virtual void onActive()
-    {}
+    {
+        //coinsValue->setString(std::to_string(coins));
+        scoreValue->setString(std::to_string(speed));
+    }
 
     static void saveScore(int speed, int coins)
     {
@@ -24,5 +27,7 @@ public:
 private:
     static int speed;
     static int coins;
+    cocos2d::Label * scoreValue;
+    cocos2d::Label * coinsValue;
 };
 

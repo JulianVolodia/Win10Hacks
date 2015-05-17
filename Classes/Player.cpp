@@ -149,7 +149,10 @@ void Player::boostUp()
 	if (verticalSpeed >= speedUp[currentLevel] && currentLevel <=3)
 	{
 		CCLOG("BOOOOOOST!!!!");
-		if (++currentLevel <= 3) runAnimation(String::createWithFormat("lvl%d", currentLevel)->getCString());
+        if (++currentLevel <= 3) {
+            stopActionByTag(TAG_ANIMATION);
+            runAnimation(String::createWithFormat("lvl%d", currentLevel)->getCString());
+        }
 	}
 
     SoundEngine::stopBackground();
@@ -170,6 +173,9 @@ void Player::startGame()
     SoundEngine::stopBackground();
     SoundEngine::playBackground("audio/afryka_1_mock_up.wav", 1.0, true);
     SoundEngine::playEffect("audio/rundirt_long.wav", true, 0.5);
+
+    stopActionByTag(TAG_ANIMATION);
+    runAnimation(String::createWithFormat("lvl0", currentLevel)->getCString());
 }
 
 void Player::endGame()
@@ -177,12 +183,18 @@ void Player::endGame()
 	CCLOG("CHUJ");
 	touchListener->setEnabled(false);
 	keyboardListener->setEnabled(false);
-	acceleration = 0;
-	verticalSpeed = 0;
 	gameRunning = false;
-    EndGameLayer::saveScore(horizontalSpeed, 10);
-    Leaderboard::push(AchievementsLayer::name, horizontalSpeed);
+    EndGameLayer::saveScore(verticalSpeed, rand() % 12);
+    Leaderboard::push(AchievementsLayer::name, verticalSpeed);
+
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, -visibleSize.height / 4));
+    runAction(moveTo);
+
+    acceleration = 0;
 	horizontalSpeed = 0;
+    currentLevel = 0;
+    verticalSpeed = 100;
     AchievementsLayer::achieve(AchievementsLayer::FIRST_GAME);
     GameSceneDefines::queuedState = GameSceneDefines::ENDGAME;
 }
