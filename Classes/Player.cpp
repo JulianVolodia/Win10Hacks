@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "GameObject.h"
 #include "AnimationUtils.h"
+#include "GameLayer.h"
 
 using namespace cocos2d;
 
@@ -22,17 +23,17 @@ bool Player::init()
 	button->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 8));
 	button->setScale(0.5);
 
-	speedUp[0] = 200;
-	speedUp[1] = 230;
-	speedUp[2] = 280;
-	speedUp[3] = 350;
-	speedUp[4] = 500;
+	speedUp[0] = 150;
+	speedUp[1] = 300;
+	speedUp[2] = 400;
+	speedUp[3] = 500;
+	speedUp[4] = 700;
 
 	accelerationBase[0] = 5;
 	accelerationBase[1] = 10;
-	accelerationBase[2] = 25;
-	accelerationBase[3] = 40;
-	accelerationBase[4] = 60;
+	accelerationBase[2] = 15;
+	accelerationBase[3] = 25;
+	accelerationBase[4] = 40;
 
 	auto physicsBody = PhysicsBody::createBox(this->getContentSize());
 	physicsBody->setDynamic(false);
@@ -81,7 +82,7 @@ void Player::update(float dt)
 	}
 	if (gameRunning)
 	{
-		if (verticalSpeed + acceleration * dt <= speedUp[currentLevel] + 3)
+		if (verticalSpeed + acceleration * dt <= speedUp[currentLevel] + 3 || currentLevel == 4)
 		{
 			verticalSpeed += acceleration * dt;
 		}
@@ -180,6 +181,8 @@ void Player::startGame()
 
 void Player::endGame()
 {
+	auto visibleSize = Director::getInstance()->getVisibleSize();
+
 	CCLOG("CHUJ");
 	touchListener->setEnabled(false);
 	keyboardListener->setEnabled(false);
@@ -197,6 +200,10 @@ void Player::endGame()
     verticalSpeed = 100;
     AchievementsLayer::achieve(AchievementsLayer::FIRST_GAME);
     GameSceneDefines::queuedState = GameSceneDefines::ENDGAME;
+
+	auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, -visibleSize.height / 4));
+	runAction(moveTo);
+	verticalSpeed = 100;
 }
 
 void Player::resetGame()
