@@ -9,9 +9,6 @@ bool LeaderboardLayer::init()
     if (!MainLayer::init())
         return false;
 
-    Leaderboard::push("Dalton", 100);
-    Leaderboard::pull(5);
-
     scoreboard = Label::create();
     scoreboard->setSystemFontSize(48);
     scoreboard->setPosition(Director::getInstance()->getVisibleSize() / 2.f);
