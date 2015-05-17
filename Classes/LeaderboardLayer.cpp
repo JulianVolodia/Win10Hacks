@@ -51,6 +51,7 @@ void LeaderboardLayer::update(float dt)
         if (--count <= 0) break;
     }
     scoreboard->setString(board);
+    scoreboard->setColor(cocos2d::Color3B::BLACK);
 }
 
 void LeaderboardLayer::onActive()

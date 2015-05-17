@@ -36,6 +36,7 @@ bool CreditsLayer::init()
 
     Label * graphics1 = Label::createWithTTF("Ola Wiak, Beata Lach", "fonts/arial.ttf", fontSize);
     graphics1->setPosition(visibleSize.width / 2, visibleSize.height * 8.f / 12.f);
+    graphics1->setColor(cocos2d::Color3B::BLACK);
     this->addChild(graphics1);
 
     Label * audio = Label::createWithTTF("Audio:", "fonts/arial.ttf", fontSize);
@@ -45,6 +46,7 @@ bool CreditsLayer::init()
 
     Label * audio1 = Label::createWithTTF("Adrian Szymczykiewicz", "fonts/arial.ttf", fontSize);
     audio1->setPosition(visibleSize.width / 2, visibleSize.height * 5.f / 12.f);
+    audio1->setColor(cocos2d::Color3B::BLACK);
     this->addChild(audio1);
 
     Label * programmers = Label::createWithTTF("Code:", "fonts/arial.ttf", fontSize);
@@ -55,6 +57,7 @@ bool CreditsLayer::init()
 
     Label * programmers1 = Label::createWithTTF("Kacper Domanski, Krzysiek Pachulski,\nPawel Kaczynski", "fonts/arial.ttf", fontSize);
     programmers1->setPosition(visibleSize.width / 2, visibleSize.height * 2.f / 12.f);
+    programmers1->setColor(cocos2d::Color3B::BLACK);
     this->addChild(programmers1);
 
     this->addChild(menu);
