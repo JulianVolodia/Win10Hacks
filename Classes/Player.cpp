@@ -153,12 +153,11 @@ void Player::boostUp()
         if (++currentLevel <= 3) {
             stopActionByTag(TAG_ANIMATION);
             runAnimation(String::createWithFormat("lvl%d", currentLevel)->getCString());
-        }
+				SoundEngine::stopBackground();
+				SoundEngine::playEffect("audio/sweep.wav", false, 1.0);
+				SoundEngine::playBackground("audio/afryka_1_mock_up_" + std::to_string(currentLevel + 1) + ".wav", 1.0, true);
+		}
 	}
-
-    SoundEngine::stopBackground();
-    SoundEngine::playEffect("audio/sweep.wav", false, 1.0);
-    SoundEngine::playBackground("audio/afryka_1_mock_up_" + std::to_string(currentLevel) + ".wav", 1.0, true);
 }
 
 void Player::startGame()
@@ -190,12 +189,8 @@ void Player::endGame()
     EndGameLayer::saveScore(verticalSpeed, rand() % 12);
     Leaderboard::push(AchievementsLayer::name, verticalSpeed);
 
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, -visibleSize.height / 4));
-    runAction(moveTo);
-
     acceleration = 0;
-	horizontalSpeed = 0;
+		horizontalSpeed = 0;
     currentLevel = 0;
     verticalSpeed = 100;
     AchievementsLayer::achieve(AchievementsLayer::FIRST_GAME);
@@ -203,7 +198,6 @@ void Player::endGame()
 
 	auto moveTo = MoveTo::create(0.5f, Vec2(visibleSize.width / 2, -visibleSize.height / 4));
 	runAction(moveTo);
-	verticalSpeed = 100;
 }
 
 void Player::resetGame()
